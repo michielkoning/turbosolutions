@@ -2,7 +2,7 @@
   "name": "turbosolutions",
   "version": "1.0.0",
   "private": true,
-  "description": "My posh Nuxt.js project",
+  "description": "See our gamechaginging turbocharger service in action",
   "author": "Michiel Koning",
   "scripts": {
     "build": "nuxt build",
