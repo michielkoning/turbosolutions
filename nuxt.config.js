@@ -98,23 +98,5 @@ export default {
         }
       }
     }
-  },
-  generate: {
-    async routes() {
-      const response = await axios.get(`${baseUrl}wp/v2/posts/?per_page=100`)
-      const posts = response.data.map(post => post.slug)
-      const urls = ['biography', ...posts]
-
-      return urls
-    }
-  },
-  sitemap: {
-    hostname: 'https://nordgarden.michielkoning.nl/',
-    async routes() {
-      const response = await axios.get(`${baseUrl}wp/v2/posts/?per_page=100`)
-      return response.data.map(
-        post => `https://nordgarden.michielkoning.nl/${post.slug}`
-      )
-    }
   }
 }
