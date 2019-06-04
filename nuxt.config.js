@@ -11,7 +11,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | Nordgarden',
+    titleTemplate: '%s | Turbo Solutions Europe',
     meta: [
       { charset: 'utf-8' },
       {
@@ -21,7 +21,7 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 
       {
         href:

@@ -79,21 +79,3 @@ label {
     text-decoration: underline;
   }
 }
-
-.form-item {
-  margin-bottom: 0;
-  position: relative;
-
-  & label {
-    position: absolute;
-    transition: transform 0.2s ease-out;
-    top: 1rem;
-    left: 0.75rem;
-    line-height: 1.2;
-    transform-origin: 0 0;
-
-    &.focus {
-      transform: scale(0.7) translateY(-1em);
-    }
-  }
-}
