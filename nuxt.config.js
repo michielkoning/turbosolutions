@@ -24,7 +24,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 
       {
-        href: 'https://fonts.googleapis.com/css?family=ABeeZee&display=swap',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap',
         rel: 'stylesheet'
       }
     ]
@@ -40,7 +41,7 @@ export default {
    */
   css: ['~/styles/base.css'],
   router: {
-    middleware: ['i18n']
+    middleware: ['i18n', 'steps']
   },
   /*
    ** Plugins to load before mounting the App

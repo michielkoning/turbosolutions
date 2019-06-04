@@ -1,32 +1,34 @@
 <template>
-  <notch-wrapper>
+  <div class="page">
     <app-header />
-    <nuxt />
+    <nuxt class="content" />
     <error-handler />
-  </notch-wrapper>
+    <app-footer />
+  </div>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue'
+import AppFooter from '@/components/AppFooter.vue'
 import ErrorHandler from '@/components/ErrorHandler.vue'
-import NotchWrapper from '@/components/NotchWrapper.vue'
 
 export default {
   components: {
-    NotchWrapper,
     AppHeader,
+    AppFooter,
     ErrorHandler
   }
 }
 </script>
 
 <style lang="postcss" scoped>
-main {
+.page {
+  display: flex;
   min-height: 100vh;
-  padding: var(--gutter) var(--gutter) 0;
+  flex-direction: column;
+}
 
-  @media (--navigation-position-left) {
-    margin-left: var(--width-navigation-left);
-  }
+.content {
+  flex: 1 0 auto;
 }
 </style>

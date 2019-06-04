@@ -12,37 +12,38 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/tour">
+        <nuxt-link to="/get-to-know-us">
           <span class="title" :class="{ 'link-active': isCurrentStep(1) }">
-            {{ $t('tour') }}
+            {{ $t('getToKnowUs') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/albums">
+        <nuxt-link to="/what-we-do">
           <span class="title" :class="{ 'link-active': isCurrentStep(2) }">
-            {{ $t('albums') }}
+            {{ $t('whatWeDo') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/videos">
+        <nuxt-link to="/mobile-workshop">
           <span class="title" :class="{ 'link-active': isCurrentStep(3) }">
-            {{ $t('videos') }}
+            {{ $t('mobileWorkshop') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/biography">
+        <nuxt-link to="/contact">
           <span class="title" :class="{ 'link-active': isCurrentStep(4) }">
-            {{ $t('biography') }}
+            {{ $t('contact') }}
           </span>
         </nuxt-link>
       </li>
     </ul>
     <div
       class="arrow"
-      :style="{ transform: arrowPosition, '-wekbkit-transform': arrowPosition }"
+      :class="{ active: mounted }"
+      :style="{ transform: arrowPosition, width: arrowWidth }"
     />
   </nav>
 </template>
@@ -51,25 +52,38 @@
 export default {
   data() {
     return {
-      arrowPosition: 0
+      arrowPosition: 0,
+      arrowWidth: 0,
+      mounted: false
     }
   },
+
   computed: {
     step() {
       return this.$store.state.step
     }
   },
   watch: {
-    $route(to, from) {
-      const position = this.$refs.list.querySelector(
-        `:nth-child(${this.step + 1}`
-      ).offsetTop
-      this.arrowPosition = `translateY(${position}px)`
+    $route() {
+      this.setArrowPosition()
     }
+  },
+  mounted() {
+    this.setArrowPosition()
+    setTimeout(() => {
+      this.mounted = true
+    }, 0)
   },
   methods: {
     isCurrentStep(step) {
       return this.step === step
+    },
+    setArrowPosition() {
+      const activeLink = this.$refs.list.querySelector(
+        `:nth-child(${this.step + 1}`
+      )
+      this.arrowPosition = `translateX(${activeLink.offsetLeft}px)`
+      this.arrowWidth = `${activeLink.offsetWidth}px`
     }
   }
 }
@@ -83,7 +97,7 @@ nav {
 ul {
   @mixin list-reset;
 
-  margin-bottom: 1em;
+  display: flex;
   border-top: 1px dashed var(--color-gray);
 
   @media (--navigation-position-left) {
@@ -96,6 +110,10 @@ ul {
   &.link-active {
     box-shadow: 0 2px 0 0 var(--color-primary);
   }
+}
+
+li + li {
+  margin-left: 1em;
 }
 
 a {
@@ -123,31 +141,12 @@ a {
 }
 
 .arrow {
-  @media (--navigation-position-left) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -2em;
-    transition: transform 0.2s ease-out;
+  width: 1em;
+  height: 2px;
+  background: currentColor;
 
-    &::after {
-      position: absolute;
-      display: block;
-      content: '';
-      border-top: 0.75em solid transparent;
-      border-bottom: 0.75em solid transparent;
-      border-left: 1em solid var(--color-navigation);
-    }
-
-    &::before {
-      position: absolute;
-      display: block;
-      content: '';
-      margin-top: -3px;
-      border-top: calc(0.75em + 3px) solid transparent;
-      border-bottom: calc(0.75em + 3px) solid transparent;
-      border-left: calc(1em + 6px) solid #fff;
-    }
+  &.active {
+    transition: all 0.2s ease-out;
   }
 }
 </style>

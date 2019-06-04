@@ -2,6 +2,7 @@
   <header>
     <skip-links />
     <mobile-navigation @toggleMenu="toggleMenu" />
+    <app-logo />
 
     <transition
       name="fade2"
@@ -11,15 +12,11 @@
     >
       <div v-show="showMenu" class="bg">
         <transition name="fade">
-          <div v-show="showMenu" ref="bg" class="content">
-            <h1>
-              <router-link to="/">Nordgarden</router-link>
-            </h1>
+          <div v-show="showMenu" class="content">
             <main-navigation />
-            <social-links />
+            <app-usps class="usps" />
           </div>
         </transition>
-        <div class="empty"></div>
       </div>
     </transition>
   </header>
@@ -27,19 +24,20 @@
 
 <script>
 import SkipLinks from '@/components/SkipLinks.vue'
-
 import MainNavigation from '@/components/MainNavigation.vue'
-import SocialLinks from '@/components/SocialLinks.vue'
+import AppUsps from '@/components/AppUsps.vue'
 import MobileNavigation from '@/components/MobileNavigation.vue'
+import AppLogo from '@/components/Logo.vue'
 
 const bodyScrollLock = require('body-scroll-lock')
 
 export default {
   components: {
     SkipLinks,
-    SocialLinks,
     MainNavigation,
-    MobileNavigation
+    MobileNavigation,
+    AppUsps,
+    AppLogo
   },
   data() {
     return {
@@ -68,7 +66,12 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+header {
+  display: flex;
+}
+
 .content {
+  @mixin color-negative;
   padding: 5em var(--gutter) var(--gutter);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -76,28 +79,25 @@ export default {
 
   @media (--navigation-position-left) {
     padding: var(--gutter);
+    flex-direction: column;
     overflow: visible;
     transform: translateY(0);
-    display: block !important;
+    display: flex !important;
+    align-items: flex-end;
     max-height: none;
-    background: var(--color-bg-page);
   }
+}
+
+.usps {
+  order: -1;
 }
 
 a {
   @mixin link-reset;
 }
 
-h1 {
-  color: currentColor;
-
-  & a {
-    text-decoration: none;
-  }
-}
-
 .bg {
-  background: var(--color-bg-page);
+  flex: 1 1 auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -109,12 +109,11 @@ h1 {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
 
   @media (--navigation-position-left) {
+    height: auto;
+    position: static;
     padding: 0;
-    border-right: 2px solid #fff;
-    background: transparent;
     overflow: visible;
     display: block !important;
-    width: var(--width-navigation-left);
   }
 }
 
