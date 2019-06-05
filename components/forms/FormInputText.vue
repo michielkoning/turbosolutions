@@ -2,26 +2,28 @@
   <div class="field">
     <label ref="label" :for="id">{{ title }}</label>
     <input
-      type="text"
+      :id="id"
+      v-bind="$attrs"
       :value="value"
       @focus="setFocusClass"
       @blur="setBlurClass"
       @input="$emit('input', $event.target.value)"
     />
+    <span aria-live="assertive">
+      <slot name="error"></slot>
+    </span>
   </div>
 </template>
 
 <script>
+import RandomProp from '~/mixins/random.js'
 export default {
   props: {
     title: {
       type: String,
       required: true,
     },
-    id: {
-      type: String,
-      required: true,
-    },
+    id: RandomProp,
     value: {
       type: String,
       required: true,

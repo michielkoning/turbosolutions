@@ -46,7 +46,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/i18n.js', '~/plugins/axios'],
+  plugins: ['~/plugins/i18n.js', '~/plugins/axios', '~/plugins/vuelidate'],
 
   /*
    ** Nuxt.js modules
