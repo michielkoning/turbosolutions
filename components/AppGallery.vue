@@ -16,9 +16,9 @@
 export default {
   data() {
     return {
-      images: ['2', '3', '4']
+      images: ['2', '3', '4'],
     }
-  }
+  },
 }
 </script>
 

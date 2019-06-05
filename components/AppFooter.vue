@@ -14,8 +14,8 @@ import NotchWrapper from '@/components/NotchWrapper.vue'
 
 export default {
   components: {
-    NotchWrapper
-  }
+    NotchWrapper,
+  },
 }
 </script>
 

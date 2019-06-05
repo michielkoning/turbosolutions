@@ -11,15 +11,15 @@ import FormContact from '@/components/FormContact.vue'
 export default {
   components: {
     AppPage,
-    FormContact
+    FormContact,
   },
   meta: {
-    step: 4
+    step: 4,
   },
   head() {
     return {
-      title: this.$t('contact')
+      title: this.$t('contact'),
     }
-  }
+  },
 }
 </script>

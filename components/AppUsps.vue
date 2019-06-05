@@ -21,8 +21,8 @@ import IconPause from '@/assets/icons/pause.svg'
 
 export default {
   components: {
-    IconPause
-  }
+    IconPause,
+  },
 }
 </script>
 
@@ -30,16 +30,21 @@ export default {
 ul {
   @mixin list-reset;
   text-transform: uppercase;
-  display: flex;
   margin-bottom: 1em;
+
+  @media (--navigation-position-left) {
+    display: flex;
+  }
 }
 
 li {
   display: flex;
   align-items: center;
 
-  & + li {
-    margin-left: 1em;
+  @media (--navigation-position-left) {
+    & + li {
+      margin-left: 1em;
+    }
   }
 }
 

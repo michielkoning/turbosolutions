@@ -22,14 +22,14 @@ import AppLoader from '@/components/AppLoader.vue'
 export default {
   components: {
     AppLoader,
-    AppPost
+    AppPost,
   },
 
   computed: {
     ...mapState('posts', ['list', 'isLoading', 'currentPage', 'totalPages']),
     ...mapGetters({
-      hasAllPostsLoaded: 'posts/hasAllPostsLoaded'
-    })
+      hasAllPostsLoaded: 'posts/hasAllPostsLoaded',
+    }),
   },
 
   mounted() {
@@ -37,9 +37,9 @@ export default {
   },
   methods: {
     ...mapActions({
-      setPosts: 'posts/setPosts'
-    })
-  }
+      setPosts: 'posts/setPosts',
+    }),
+  },
 }
 </script>
 

@@ -1,10 +1,10 @@
 <template>
   <li>
     <!-- eslint-disable-next-line -->
-    <h2 v-html="post.title.rendered"/>
+    <h2 v-html="post.title.rendered" />
     <post-date :date="post.date" />
     <!-- eslint-disable-next-line -->
-    <div class="text" v-html="post.excerpt.rendered"/>
+    <div class="text" v-html="post.excerpt.rendered" />
     <div class="link-wrapper">
       <read-more-link :to="post.slug" :text="$t('readMore')" />
     </div>
@@ -18,14 +18,14 @@ import ReadMoreLink from '@/components/ReadMoreLink.vue'
 export default {
   components: {
     PostDate,
-    ReadMoreLink
+    ReadMoreLink,
   },
   props: {
     post: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

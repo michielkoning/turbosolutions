@@ -16,16 +16,16 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     id: {
       type: String,
-      required: true
+      required: true,
     },
     value: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   mounted() {
     this.setClassWhenFilled()
@@ -39,8 +39,8 @@ export default {
     },
     setBlurClass() {
       if (!this.value) this.$refs.label.classList.remove('focus')
-    }
-  }
+    },
+  },
 }
 </script>
 

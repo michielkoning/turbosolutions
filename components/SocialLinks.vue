@@ -84,8 +84,8 @@ export default {
     IconYoutube,
     IconFacebook,
     IconTwitter,
-    IconLinkedin
-  }
+    IconLinkedin,
+  },
 }
 </script>
 

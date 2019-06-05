@@ -41,21 +41,21 @@ export default {
   components: {
     IconPlay,
     IconPause,
-    AppModal
+    AppModal,
   },
   props: {
     song: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      showModal: false
+      showModal: false,
     }
   },
   computed: {
-    ...mapState('albums', ['currentSong', 'isPlaying'])
+    ...mapState('albums', ['currentSong', 'isPlaying']),
   },
   methods: {
     toggleModal(status) {
@@ -63,7 +63,7 @@ export default {
     },
     ...mapActions({
       selectSong: 'albums/selectSong',
-      setPlayState: 'albums/setPlayState'
+      setPlayState: 'albums/setPlayState',
     }),
     isPlayingCurrentSong(song) {
       return song.file === this.currentSong.file && this.isPlaying
@@ -75,8 +75,8 @@ export default {
     },
     pause() {
       EventBusUtil.$emit('audio-play-song', false)
-    }
-  }
+    },
+  },
 }
 </script>
 

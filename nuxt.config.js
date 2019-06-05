@@ -5,7 +5,7 @@ const baseUrl = 'https://api.nordgarden.michielkoning.nl/wp-json/'
 export default {
   mode: 'universal',
   env: {
-    baseUrl
+    baseUrl,
   },
   /*
    ** Headers of the page
@@ -16,9 +16,9 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, viewport-fit=cover'
+        content: 'width=device-width, initial-scale=1, viewport-fit=cover',
       },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -26,9 +26,9 @@ export default {
       {
         href:
           'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap',
-        rel: 'stylesheet'
-      }
-    ]
+        rel: 'stylesheet',
+      },
+    ],
   },
 
   /*
@@ -41,7 +41,7 @@ export default {
    */
   css: ['~/styles/base.css'],
   router: {
-    middleware: ['i18n', 'steps']
+    middleware: ['i18n', 'steps'],
   },
   /*
    ** Plugins to load before mounting the App
@@ -56,13 +56,13 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
   /*
    ** Axios module configuration
    */
   axios: {
-    baseURL: baseUrl
+    baseURL: baseUrl,
   },
 
   /*
@@ -79,14 +79,14 @@ export default {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
     },
     postcss: {
       plugins: {
         'postcss-mixins': {
-          mixinsDir: './styles/mixins/'
+          mixinsDir: './styles/mixins/',
         },
         'postcss-preset-env': {
           importFrom: ['./styles/media-queries/media-queries.css'],
@@ -94,10 +94,10 @@ export default {
           features: {
             'nesting-rules': true,
             'custom-media-queries': true,
-            'media-query-ranges': true
-          }
-        }
-      }
-    }
-  }
+            'media-query-ranges': true,
+          },
+        },
+      },
+    },
+  },
 }

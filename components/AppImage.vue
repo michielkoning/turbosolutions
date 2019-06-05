@@ -14,17 +14,17 @@ export default {
   props: {
     src: {
       type: String,
-      required: true
+      required: true,
     },
     width: {
       type: Number,
-      default: 0
+      default: 0,
     },
     height: {
       type: Number,
-      default: 0
-    }
-  }
+      default: 0,
+    },
+  },
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- eslint-disable-next-line -->
-    <h1 id="content" tabindex="-1" v-html="title"/>
+    <h1 id="content" tabindex="-1" v-html="title" />
     <slot />
   </main>
 </template>
@@ -11,9 +11,9 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 }
 </script>
 

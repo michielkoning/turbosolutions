@@ -12,7 +12,7 @@
     >
       <div v-show="showMenu" class="bg">
         <transition name="fade">
-          <div v-show="showMenu" class="content">
+          <div v-show="showMenu" ref="bg" class="content">
             <main-navigation />
             <app-usps class="usps" />
           </div>
@@ -37,11 +37,11 @@ export default {
     MainNavigation,
     MobileNavigation,
     AppUsps,
-    AppLogo
+    AppLogo,
   },
   data() {
     return {
-      showMenu: false
+      showMenu: false,
     }
   },
 
@@ -60,8 +60,8 @@ export default {
     afterLeave() {
       const bg = this.$refs.bg
       bodyScrollLock.enableBodyScroll(bg)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -98,6 +98,7 @@ a {
 
 .bg {
   flex: 1 1 auto;
+  background: var(--color-primary);
   position: fixed;
   top: 0;
   left: 0;

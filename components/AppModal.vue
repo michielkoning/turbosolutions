@@ -29,18 +29,18 @@ import IconClose from '@/assets/icons/close.svg'
 export default {
   name: 'Modal',
   components: {
-    IconClose
+    IconClose,
   },
   props: {
     title: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       nodes: null,
-      lastFocus: null
+      lastFocus: null,
     }
   },
   mounted() {
@@ -93,8 +93,8 @@ export default {
     },
     close() {
       this.$emit('close')
-    }
-  }
+    },
+  },
 }
 </script>
 

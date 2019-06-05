@@ -16,8 +16,8 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    ErrorHandler
-  }
+    ErrorHandler,
+  },
 }
 </script>
 

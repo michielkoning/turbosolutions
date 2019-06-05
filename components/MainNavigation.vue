@@ -54,19 +54,19 @@ export default {
     return {
       arrowPosition: 0,
       arrowWidth: 0,
-      mounted: false
+      mounted: false,
     }
   },
 
   computed: {
     step() {
       return this.$store.state.step
-    }
+    },
   },
   watch: {
     $route() {
       this.setArrowPosition()
-    }
+    },
   },
   mounted() {
     this.setArrowPosition()
@@ -80,12 +80,12 @@ export default {
     },
     setArrowPosition() {
       const activeLink = this.$refs.list.querySelector(
-        `:nth-child(${this.step + 1}`
+        `:nth-child(${this.step + 1}`,
       )
       this.arrowPosition = `translateX(${activeLink.offsetLeft}px)`
       this.arrowWidth = `${activeLink.offsetWidth}px`
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -97,10 +97,10 @@ nav {
 ul {
   @mixin list-reset;
 
-  display: flex;
   border-top: 1px dashed var(--color-gray);
 
   @media (--navigation-position-left) {
+    display: flex;
     border-top: 0;
   }
 }
@@ -112,8 +112,10 @@ ul {
   }
 }
 
-li + li {
-  margin-left: 1em;
+@media (--navigation-position-left) {
+  li + li {
+    margin-left: 1em;
+  }
 }
 
 a {
@@ -141,10 +143,13 @@ a {
 }
 
 .arrow {
-  width: 1em;
   height: 2px;
   background: currentColor;
+  display: none;
 
+  @media (--navigation-position-left) {
+    display: block;
+  }
   &.active {
     transition: all 0.2s ease-out;
   }

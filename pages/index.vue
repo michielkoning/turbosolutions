@@ -20,15 +20,15 @@ import FormContact from '@/components/FormContact.vue'
 export default {
   components: {
     AppPage,
-    FormContact
+    FormContact,
   },
   meta: {
-    step: 0
+    step: 0,
   },
   head() {
     return {
-      title: this.$t('home')
+      title: this.$t('home'),
     }
-  }
+  },
 }
 </script>

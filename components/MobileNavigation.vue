@@ -22,26 +22,26 @@ import NotchWrapper from '@/components/NotchWrapper.vue'
 export default {
   components: {
     IconBars,
-    NotchWrapper
+    NotchWrapper,
   },
   data() {
     return {
-      menuIsExpanded: false
+      menuIsExpanded: false,
     }
   },
 
   watch: {
     $route() {
       this.toggleMenu(false)
-    }
+    },
   },
 
   methods: {
     toggleMenu(status) {
       this.menuIsExpanded = status
       this.$emit('toggleMenu', status)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -52,7 +52,7 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--color-secondary);
+  background: var(--color-primary);
   z-index: var(--mobile-navigation);
   border-bottom: 2px solid var(--color-white);
 
@@ -71,6 +71,7 @@ export default {
   font-size: 0.8em;
   display: flex;
   align-items: center;
+  background: var(--color-white);
 }
 
 svg {

@@ -1,7 +1,7 @@
 export const state = () => ({
   locales: ['en'],
   locale: 'en',
-  step: 0
+  step: 0,
 })
 
 export const mutations = {
@@ -12,5 +12,5 @@ export const mutations = {
   },
   SET_STEP(state, step) {
     state.step = step
-  }
+  },
 }

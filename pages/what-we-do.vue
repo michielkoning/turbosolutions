@@ -7,15 +7,15 @@ import AppPage from '@/components/AppPage.vue'
 
 export default {
   components: {
-    AppPage
+    AppPage,
   },
   meta: {
-    step: 2
+    step: 2,
   },
   head() {
     return {
-      title: this.$t('whatWeDo')
+      title: this.$t('whatWeDo'),
     }
-  }
+  },
 }
 </script>

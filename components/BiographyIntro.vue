@@ -29,14 +29,14 @@ import ReadMoreLink from '@/components/ReadMoreLink.vue'
 
 export default {
   components: {
-    ReadMoreLink
+    ReadMoreLink,
   },
   props: {
     readMore: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>
 

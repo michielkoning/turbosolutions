@@ -14,13 +14,13 @@ import FormInputText from '@/components/forms/FormInputText.vue'
 export default {
   components: {
     FormFieldset,
-    FormInputText
+    FormInputText,
   },
   data() {
     return {
       name: '',
-      email: ''
+      email: '',
     }
-  }
+  },
 }
 </script>

@@ -10,18 +10,18 @@ import IconChevronRight from '@/assets/icons/chevron-right.svg'
 
 export default {
   components: {
-    IconChevronRight
+    IconChevronRight,
   },
   props: {
     to: {
       type: String,
-      required: true
+      required: true,
     },
     text: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

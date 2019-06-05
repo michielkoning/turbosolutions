@@ -8,11 +8,11 @@ const dateTimeFormats = {
     short: {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
     },
     tour: {
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
     },
     long: {
       year: 'numeric',
@@ -20,9 +20,9 @@ const dateTimeFormats = {
       day: 'numeric',
       weekday: 'short',
       hour: 'numeric',
-      minute: 'numeric'
-    }
-  }
+      minute: 'numeric',
+    },
+  },
 }
 
 export default ({ app, store }) => {
@@ -32,8 +32,8 @@ export default ({ app, store }) => {
     locale: store.state.locale,
     fallbackLocale: 'en',
     messages: {
-      en: require('~/locales/en.json')
+      en: require('~/locales/en.json'),
     },
-    dateTimeFormats
+    dateTimeFormats,
   })
 }
