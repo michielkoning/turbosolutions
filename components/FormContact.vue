@@ -1,6 +1,8 @@
 <template>
+  <p v-if="submitted">Succes</p>
+
   <form
-    v-if="submitted"
+    v-else
     action
     data-netlify="true"
     method="post"
@@ -24,7 +26,6 @@
       <button type="submit">Send</button>
     </form-fieldset>
   </form>
-  <p v-else>Succes</p>
 </template>
 
 <script>
