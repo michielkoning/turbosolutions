@@ -26,7 +26,7 @@
   "whatWeDo": "What we do",
   "mobileWorkshop": "Mobile workshop",
   "form": {
-    "firstName": "Voornaam",
+    "name": "Voornaam",
     "lastName": "Achternaam",
     "address": "Adres",
     "zipcode": "Postcode",
@@ -58,7 +58,7 @@
         "required": "Vul je omschrijving in.",
         "isNumeric": "Vul een geldige omschrijving in."
       },
-      "firstName": {
+      "name": {
         "isNumeric": "Vul een geldige voornaam in."
       },
       "lastName": {
