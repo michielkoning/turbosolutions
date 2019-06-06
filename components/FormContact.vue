@@ -86,7 +86,7 @@ export default {
     },
   },
   methods: {
-    encode(data) {
+    encodeFormData(data) {
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
@@ -97,24 +97,21 @@ export default {
       this.$v.$touch()
       return !this.$v.$invalid
     },
-    submit() {
+    async submit() {
       this.errorMessageForm = ''
       if (this.validate()) {
         const axiosConfig = {
           header: { 'Content-Type': 'application/x-www-form-urlencoded' },
         }
-        axios
-          .post(
-            '/',
-            this.encode({
-              'form-name': 'contact',
-              ...this.form,
-            }),
-            axiosConfig,
-          )
-          .then(() => {
-            this.submitted = true
-          })
+        await axios.post(
+          '/',
+          this.encodeFormData({
+            'form-name': 'contact',
+            ...this.form,
+          }),
+          axiosConfig,
+        )
+        this.submitted = true
       }
     },
   },
