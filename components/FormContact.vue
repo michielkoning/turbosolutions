@@ -100,7 +100,7 @@ export default {
         axios.post(
           '/',
           this.encode({
-            'form-name': 'contadt',
+            'form-name': 'contact',
             ...this.form,
           }),
           axiosConfig,
