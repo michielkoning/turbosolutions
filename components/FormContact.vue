@@ -7,7 +7,7 @@
     name="contact"
     @submit.prevent="submit"
   >
-    <input type="hidden" name="form-name" value="contact">
+    <input type="hidden" name="form-name" value="contact" />
     <form-fieldset title="Contactformulier">
       <form-input-text
         v-model.trim.lazy="$v.form.name.$model"
