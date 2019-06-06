@@ -14,11 +14,13 @@
       <form-input-text
         v-model.trim.lazy="$v.form.name.$model"
         type="text"
+        name="name"
         title="Name"
         :error-message="errorMessageName"
       />
       <form-input-text
         v-model.trim.lazy="$v.form.email.$model"
+        name="email"
         type="email"
         title="E-mailaddress"
         :error-message="errorMessageEmail"
