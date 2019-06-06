@@ -9,13 +9,13 @@
     <input type="hidden" name="form-name" value="contact" />
     <form-fieldset title="Contactformulier">
       <form-input-text
-        v-model.trim.lazy="$v.name.$model"
+        v-model.trim.lazy="$v.form.name.$model"
         type="text"
         title="Name"
         :error-message="errorMessageName"
       />
       <form-input-text
-        v-model.trim.lazy="$v.email.$model"
+        v-model.trim.lazy="$v.form.email.$model"
         type="email"
         title="E-mailaddress"
         :error-message="errorMessageEmail"
@@ -29,6 +29,7 @@
 import FormFieldset from '@/components/forms/FormFieldset.vue'
 import FormInputText from '@/components/forms/FormInputText.vue'
 import { required, email } from 'vuelidate/lib/validators'
+import axios from 'axios'
 
 export default {
   components: {
@@ -37,23 +38,27 @@ export default {
   },
   data() {
     return {
-      name: '',
-      email: '',
+      form: {
+        name: '',
+        email: '',
+      },
     }
   },
   validations: {
-    name: {
-      required,
-    },
-    email: {
-      required,
-      email,
+    form: {
+      name: {
+        required,
+      },
+      email: {
+        required,
+        email,
+      },
     },
   },
   computed: {
     errorMessageName() {
-      if (this.$v.name.$anyError) {
-        if (!this.$v.name.required) {
+      if (this.$v.form.name.$anyError) {
+        if (!this.$v.form.name.required) {
           return this.$t('form.error.general.required', {
             field: this.$t('form.name').toLowerCase(),
           })
@@ -62,27 +67,45 @@ export default {
       return null
     },
     errorMessageEmail() {
-      if (this.$v.email.$anyError) {
-        if (!this.$v.email.required) {
+      if (this.$v.form.email.$anyError) {
+        if (!this.$v.form.email.required) {
           return this.$t('form.error.general.required', {
             field: this.$t('form.email').toLowerCase(),
           })
         }
 
-        if (!this.$v.email.email) return this.$t('form.error.email.email')
+        if (!this.$v.form.email.email) return this.$t('form.error.email.email')
       }
       return null
     },
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+        )
+        .join('&')
+    },
     validate() {
       this.$v.$touch()
       return !this.$v.$invalid
     },
     submit() {
       this.errorMessageForm = ''
-      window.console.log(this.validate())
-      return this.validate()
+      if (this.validate()) {
+        const axiosConfig = {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        }
+        axios.post(
+          '/',
+          this.encode({
+            'form-name': 'contadt',
+            ...this.form,
+          }),
+          axiosConfig,
+        )
+      }
     },
   },
 }
