@@ -1,12 +1,13 @@
 <template>
   <form
+    v-if="submitted"
     action
     data-netlify="true"
     method="post"
     name="contact"
     @submit.prevent="submit"
   >
-    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="form-name" value="contact">
     <form-fieldset title="Contactformulier">
       <form-input-text
         v-model.trim.lazy="$v.form.name.$model"
@@ -23,6 +24,7 @@
       <button type="submit">Send</button>
     </form-fieldset>
   </form>
+  <p v-else>Succes</p>
 </template>
 
 <script>
@@ -38,9 +40,10 @@ export default {
   },
   data() {
     return {
+      submitted: false,
       form: {
-        name: '',
-        email: '',
+        name: 'michiel',
+        email: 'mail@michielkoning.nl',
       },
     }
   },
@@ -97,14 +100,18 @@ export default {
         const axiosConfig = {
           header: { 'Content-Type': 'application/x-www-form-urlencoded' },
         }
-        axios.post(
-          '/',
-          this.encode({
-            'form-name': 'contact',
-            ...this.form,
-          }),
-          axiosConfig,
-        )
+        axios
+          .post(
+            '/',
+            this.encode({
+              'form-name': 'contact',
+              ...this.form,
+            }),
+            axiosConfig,
+          )
+          .then(() => {
+            this.submitted = true
+          })
       }
     },
   },
