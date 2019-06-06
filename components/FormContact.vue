@@ -1,14 +1,18 @@
 <template>
   <form action @submit.prevent="submit">
     <form-fieldset title="Contactformulier">
-      <form-input-text v-model.trim="$v.name.$model" type="text" title="Name" />
-      {{ $v.name }}
       <form-input-text
-        v-model.trim="$v.email.$model"
+        v-model.trim.lazy="$v.name.$model"
+        type="text"
+        title="Name"
+        :error-message="errorMessageName"
+      />
+      <form-input-text
+        v-model.trim.lazy="$v.email.$model"
         type="email"
         title="E-mailaddress"
+        :error-message="errorMessageEmail"
       />
-      {{ $v.email }}
       <button type="submit">Send</button>
     </form-fieldset>
   </form>
@@ -37,6 +41,30 @@ export default {
     email: {
       required,
       email,
+    },
+  },
+  computed: {
+    errorMessageName() {
+      if (this.$v.name.$anyError) {
+        if (!this.$v.name.required) {
+          return this.$t('form.error.general.required', {
+            field: this.$t('form.name').toLowerCase(),
+          })
+        }
+      }
+      return null
+    },
+    errorMessageEmail() {
+      if (this.$v.email.$anyError) {
+        if (!this.$v.email.required) {
+          return this.$t('form.error.general.required', {
+            field: this.$t('form.email').toLowerCase(),
+          })
+        }
+
+        if (!this.$v.email.email) return this.$t('form.error.email.email')
+      }
+      return null
     },
   },
   methods: {

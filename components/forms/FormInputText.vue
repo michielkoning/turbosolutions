@@ -9,9 +9,7 @@
       @blur="setBlurClass"
       @input="$emit('input', $event.target.value)"
     />
-    <span aria-live="assertive">
-      <slot name="error"></slot>
-    </span>
+    <span aria-live="assertive">{{ errorMessage }}</span>
   </div>
 </template>
 
@@ -27,6 +25,11 @@ export default {
     value: {
       type: String,
       required: true,
+    },
+    errorMessage: {
+      type: String,
+      required: false,
+      default: '',
     },
   },
   mounted() {
