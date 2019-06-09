@@ -53,10 +53,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.intro {
-  font-size: 1.2em;
-}
-
 img {
   display: block;
   width: 100%;

@@ -34,8 +34,9 @@ export default {
 
 .title {
   grid-area: title;
-  padding: 0 1em 1em 0;
+  padding: 0 1rem 1rem 0;
   align-self: end;
+  margin-bottom: 0;
 }
 
 .image-1 {

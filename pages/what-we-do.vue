@@ -1,11 +1,16 @@
 <template>
   <div>
-    sda
+    <block-reviews />
   </div>
 </template>
 
 <script>
+import BlockReviews from '@/components/blocks/BlockReviews.vue'
+
 export default {
+  components: {
+    BlockReviews,
+  },
   meta: {
     step: 2,
   },
