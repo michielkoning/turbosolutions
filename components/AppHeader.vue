@@ -4,6 +4,7 @@
     <mobile-navigation @toggleMenu="toggleMenu" />
     <nuxt-link to="/">
       <icon-logo class="logo" aria-hidden="true" width="156" height="88" />
+      <span class="sr-only">Turbo Solutions</span>
     </nuxt-link>
 
     <transition
