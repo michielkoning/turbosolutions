@@ -1,27 +1,30 @@
 <template>
   <ul>
     <li>
-      <icon-pause aria-hidden="true" width="24" height="24" />
+      <icon-star-empty aria-hidden="true" width="26" height="26" />
       <span class="title">The best quality</span>
     </li>
     <li>
-      <icon-pause aria-hidden="true" width="24" height="24" />
-      <span class="title">Spare parts always</span>
-      in stock
+      <icon-spare-parts aria-hidden="true" width="24" height="24" />
+      <span class="title">Spare parts always in stock</span>
     </li>
     <li>
-      <icon-pause aria-hidden="true" width="24" height="24" />
+      <icon-service aria-hidden="true" width="24" height="24" />
       <span class="title">24/7 service</span>
     </li>
   </ul>
 </template>
 
 <script>
-import IconPause from '@/assets/icons/pause.svg'
+import IconService from '@/assets/icons/service.svg'
+import IconSpareParts from '@/assets/icons/spare-parts.svg'
+import IconStarEmpty from '@/assets/icons/star-empty.svg'
 
 export default {
   components: {
-    IconPause,
+    IconService,
+    IconSpareParts,
+    IconStarEmpty,
   },
 }
 </script>
@@ -40,7 +43,6 @@ ul {
 
 li {
   display: flex;
-  align-items: center;
   margin-bottom: 0.5em;
 
   @media (--navigation-position-left) {
@@ -52,5 +54,10 @@ li {
 
 .title {
   margin-left: 0.5em;
+}
+
+svg {
+  margin-top: 0.1em;
+  flex: 0 0 auto;
 }
 </style>
