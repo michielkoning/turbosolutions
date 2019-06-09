@@ -36,7 +36,7 @@ export default {
 
   @media (--viewport-md) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 12em);
+    grid-template-rows: repeat(2, 12em);
     grid-template-areas:
       'title image-2 image-3'
       'image-1 image-2 image-3';
