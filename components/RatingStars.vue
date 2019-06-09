@@ -1,0 +1,37 @@
+<template>
+  <div class="stars">
+    <rating-star v-for="star in stars" :key="star" :star="star" />
+    <span class="sr-only">{{ rating }} Stars</span>
+  </div>
+</template>
+
+<script>
+import RatingStar from '@/components/RatingStar.vue'
+
+export default {
+  components: {
+    RatingStar,
+  },
+  props: {
+    rating: {
+      type: Number,
+      required: true,
+    },
+  },
+  computed: {
+    stars() {
+      const stars = []
+      for (let i = 1; i <= 5; i++) {
+        if (i < this.rating + 1 && i > this.rating) {
+          stars.push('star-half')
+        } else if (i <= this.rating) {
+          stars.push('star-full')
+        } else {
+          stars.push('star-empty')
+        }
+      }
+      return stars
+    },
+  },
+}
+</script>

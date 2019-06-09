@@ -1,5 +1,6 @@
 <template>
   <blockquote>
+    <rating-stars :rating="review.rating" />
     <div class="header">
       <h3>{{ review.title }}</h3>
       -
@@ -10,7 +11,12 @@
 </template>
 
 <script>
+import RatingStars from '@/components/RatingStars.vue'
+
 export default {
+  components: {
+    RatingStars,
+  },
   props: {
     review: {
       type: Object,

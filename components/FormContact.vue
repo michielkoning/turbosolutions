@@ -25,6 +25,13 @@
         title="E-mailaddress"
         :error-message="errorMessageEmail"
       />
+      <form-textarea
+        v-model.trim="form.message"
+        name="message"
+        rows="4"
+        type="message"
+        title="Bericht"
+      />
       <button type="submit">Send</button>
     </form-fieldset>
   </form>
@@ -33,6 +40,7 @@
 <script>
 import FormFieldset from '@/components/forms/FormFieldset.vue'
 import FormInputText from '@/components/forms/FormInputText.vue'
+import FormTextarea from '@/components/forms/FormTextarea.vue'
 import { required, email } from 'vuelidate/lib/validators'
 import axios from 'axios'
 
@@ -40,6 +48,7 @@ export default {
   components: {
     FormFieldset,
     FormInputText,
+    FormTextarea,
   },
   data() {
     return {
@@ -47,6 +56,7 @@ export default {
       form: {
         name: 'michiel',
         email: 'mail@michielkoning.nl',
+        message: 'bericht',
       },
     }
   },

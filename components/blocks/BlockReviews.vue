@@ -32,22 +32,25 @@ export default {
     return {
       reviews: [
         {
-          cite: 'Benelux Powerplants Lorem ipsum dolor',
+          rating: 5,
+          cite: 'Benelux Powerplants',
           title: 'Outstanding service and speed',
           text:
-            'Sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
         },
         {
-          cite: 'TurboCharger Madrid Lorem ipsum dolor',
+          rating: 3.5,
+          cite: 'TurboCharger Madrid',
           title: 'Always spare parts available',
           text:
-            'Sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.',
         },
         {
-          cite: 'Nuon Lorem ipsum',
+          cite: 'Nuon',
+          rating: 4,
           title: '24/7 service is what we needed and what we got',
           text:
-            'Dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
         },
       ],
     }
