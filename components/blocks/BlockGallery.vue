@@ -26,19 +26,13 @@ export default {
 <style lang="postcss" scoped>
 .gallery {
   display: grid;
-  grid-gap: 0.5em;
-  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.25em;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    'title title'
-    'image-1 image-1'
-    'image-2 image-3'
-    'image-2 image-3';
-  @media (--viewport-sm) {
-    grid-template-areas:
-      'title  image-1'
-      'image-2 image-3'
-      'image-2 image-3';
-  }
+    'title title title'
+    '. image-2 image-3'
+    'image-1 image-2 image-3';
+
   @media (--viewport-md) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -50,7 +44,7 @@ export default {
 .title {
   grid-area: title;
   align-self: end;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .image-1 {
