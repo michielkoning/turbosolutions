@@ -10,7 +10,7 @@ export default {
     AppPage,
   },
   meta: {
-    step: 1,
+    step: 1
   },
   head() {
     return {
