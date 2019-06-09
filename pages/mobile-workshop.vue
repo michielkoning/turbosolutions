@@ -1,13 +1,15 @@
 <template>
-  <app-page :title="$t('mobileWorkshop')"></app-page>
+  <div>
+    <block-mobile-workshop />
+  </div>
 </template>
 
 <script>
-import AppPage from '@/components/AppPage.vue'
+import BlockMobileWorkshop from '@/components/blocks/BlockMobileWorkshop.vue'
 
 export default {
   components: {
-    AppPage,
+    BlockMobileWorkshop,
   },
   meta: {
     step: 3,

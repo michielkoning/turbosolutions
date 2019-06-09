@@ -1,6 +1,6 @@
 <template>
   <div class="stars">
-    <rating-star v-for="star in stars" :key="star" :star="star" />
+    <rating-star v-for="(star, index) in stars" :key="index" :star="star" />
     <span class="sr-only">{{ rating }} Stars</span>
   </div>
 </template>

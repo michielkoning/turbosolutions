@@ -30,9 +30,10 @@ export default {
 ul {
   @mixin list-reset;
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-top: 1em;
 
   @media (--navigation-position-left) {
+    margin-top: 0;
     display: flex;
   }
 }
@@ -40,6 +41,7 @@ ul {
 li {
   display: flex;
   align-items: center;
+  margin-bottom: 0.5em;
 
   @media (--navigation-position-left) {
     & + li {

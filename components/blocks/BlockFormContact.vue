@@ -35,10 +35,12 @@ export default {
 }
 
 .wrapper {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: 'form text';
+  @media (--viewport-md) {
+    grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 'form text';
+  }
 }
 
 .text {
@@ -47,5 +49,9 @@ export default {
 
 .form {
   grid-area: form;
+}
+
+a {
+  word-wrap: break-word;
 }
 </style>

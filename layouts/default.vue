@@ -1,8 +1,10 @@
 <template>
   <div class="page">
     <app-header />
-    <nuxt class="content" />
-    <block-form-contact />
+    <main>
+      <nuxt class="content" />
+      <block-form-contact />
+    </main>
     <error-handler />
     <app-footer />
   </div>
@@ -25,6 +27,13 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+main {
+  padding-top: 2em;
+  @media (--navigation-position-left) {
+    padding-top: 0;
+  }
+}
+
 .page {
   display: flex;
   min-height: 100vh;

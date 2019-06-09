@@ -71,7 +71,7 @@ export default {
   font-size: 0.8em;
   display: flex;
   align-items: center;
-  background: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 svg {

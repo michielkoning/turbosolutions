@@ -3,7 +3,7 @@
     <skip-links />
     <mobile-navigation @toggleMenu="toggleMenu" />
     <nuxt-link to="/">
-      <icon-logo aria-hidden="true" width="156" height="88" />
+      <icon-logo class="logo" aria-hidden="true" width="156" height="88" />
     </nuxt-link>
 
     <transition
@@ -140,5 +140,13 @@ a {
 .fade2-enter,
 .fade2-leave-to {
   transform: translateY(-100vh);
+}
+
+.logo {
+  fill: var(--color-primary);
+  display: none;
+  @media (--navigation-position-left) {
+    display: block;
+  }
 }
 </style>

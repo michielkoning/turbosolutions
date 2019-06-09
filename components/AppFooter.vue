@@ -26,7 +26,7 @@
             </li>
           </ul>
         </div>
-        <company-address />
+        <company-address class="company-address" />
         <social-links />
       </div>
     </notch-wrapper>
@@ -65,6 +65,7 @@ ul {
   @mixin list-reset;
 }
 
+.company-address >>> a,
 a {
   box-shadow: 0 1px 0 0 var(--color-white);
 

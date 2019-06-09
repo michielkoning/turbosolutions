@@ -31,7 +31,9 @@ export default {
 <style lang="postcss" scoped>
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
+  grid-gap: var(--gutter);
+  @media (--viewport-sm) {
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  }
 }
 </style>

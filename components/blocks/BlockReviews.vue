@@ -61,6 +61,7 @@ export default {
 <style lang="postcss" scoped>
 ul {
   @mixin list-reset;
+  padding-top: 1em;
 }
 
 li {

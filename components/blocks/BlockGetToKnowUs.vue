@@ -1,6 +1,6 @@
 <template>
   <block-wrapper>
-    <h1>Get to know us</h1>
+    <skip-link-title class="title" :title="$t('getToKnowUs')" />
     <h2>See our Gamechanging Turbocharger service in action</h2>
     <p class="intro">
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
@@ -45,9 +45,12 @@
 
 <script>
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
+import SkipLinkTitle from '@/components/SkipLinkTitle.vue'
+
 export default {
   components: {
     BlockWrapper,
+    SkipLinkTitle,
   },
 }
 </script>
