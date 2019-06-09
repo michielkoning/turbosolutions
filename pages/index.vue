@@ -2,7 +2,6 @@
   <div>
     <block-gallery />
     <block-mobile-workshop />
-
     <block-form-contact />
   </div>
 </template>

@@ -1,14 +1,11 @@
 <template>
-  <app-page :title="$t('whatWeDo')"></app-page>
+  <div>
+    sda
+  </div>
 </template>
 
 <script>
-import AppPage from '@/components/AppPage.vue'
-
 export default {
-  components: {
-    AppPage,
-  },
   meta: {
     step: 2,
   },

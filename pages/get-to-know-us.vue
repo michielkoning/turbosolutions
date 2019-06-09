@@ -1,13 +1,15 @@
 <template>
-  <app-page :title="$t('getToKnowUs')"></app-page>
+  <div>
+    <block-get-to-know-us />
+  </div>
 </template>
 
 <script>
-import AppPage from '@/components/AppPage.vue'
+import BlockGetToKnowUs from '@/components/blocks/BlockGetToKnowUs.vue'
 
 export default {
   components: {
-    AppPage,
+    BlockGetToKnowUs,
   },
   meta: {
     step: 1,
