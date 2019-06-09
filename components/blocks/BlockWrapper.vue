@@ -1,7 +1,9 @@
 <template>
   <section>
     <notch-wrapper>
-      <slot />
+      <div class="wrapper">
+        <slot />
+      </div>
     </notch-wrapper>
   </section>
 </template>
@@ -18,5 +20,9 @@ export default {
 <style lang="postcss" scoped>
 section {
   padding: 3em 0;
+}
+
+.wrapper {
+  @mixin center var(--container-width-lg);
 }
 </style>

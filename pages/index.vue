@@ -1,19 +1,22 @@
 <template>
   <div>
-    <home-intro />
+    <block-gallery />
+    <block-mobile-workshop />
 
     <block-form-contact />
   </div>
 </template>
 
 <script>
+import BlockGallery from '@/components/blocks/BlockGallery.vue'
 import BlockFormContact from '@/components/blocks/BlockFormContact.vue'
-import HomeIntro from '@/components/Home/HomeIntro.vue'
+import BlockMobileWorkshop from '@/components/blocks/BlockMobileWorkshop.vue'
 
 export default {
   components: {
     BlockFormContact,
-    HomeIntro,
+    BlockGallery,
+    BlockMobileWorkshop,
   },
   meta: {
     step: 0,

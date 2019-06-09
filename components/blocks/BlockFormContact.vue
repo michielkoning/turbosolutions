@@ -1,7 +1,17 @@
 <template>
   <block-wrapper class="block-form-contact">
+    <h1>Make an appointment today</h1>
     <div class="wrapper">
-      <form-contact />
+      <div class="text">
+        <p>
+          Call us: <a href="tel:+34 674 14 71 73">+34 674 14 71 73</a> or send
+          an e-mail:
+          <a href="mailto:dexter@turbosolutionseurope.com"
+            >dexter@turbosolutionseurope.com</a
+          >
+        </p>
+      </div>
+      <form-contact class="form" />
     </div>
   </block-wrapper>
 </template>
@@ -24,6 +34,17 @@ export default {
 }
 
 .wrapper {
-  @mixin center var(--container-width-lg);
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 'form text';
+}
+
+.text {
+  grid-area: text;
+}
+
+.form {
+  grid-area: form;
 }
 </style>
