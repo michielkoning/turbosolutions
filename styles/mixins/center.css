@@ -1,4 +1,6 @@
 @define-mixin center {
+  max-width: 74rem;
+  width: 100%;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
   margin: 0 auto;

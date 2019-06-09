@@ -2,7 +2,7 @@
   <header>
     <skip-links />
     <mobile-navigation @toggleMenu="toggleMenu" />
-    <app-logo />
+    <icon-logo aria-hidden="true" width="156" height="88" />
 
     <transition
       name="fade2"
@@ -27,7 +27,7 @@ import SkipLinks from '@/components/SkipLinks.vue'
 import MainNavigation from '@/components/MainNavigation.vue'
 import AppUsps from '@/components/AppUsps.vue'
 import MobileNavigation from '@/components/MobileNavigation.vue'
-import AppLogo from '@/components/Logo.vue'
+import IconLogo from '@/assets/icons/logo.svg'
 
 const bodyScrollLock = require('body-scroll-lock')
 
@@ -37,7 +37,7 @@ export default {
     MainNavigation,
     MobileNavigation,
     AppUsps,
-    AppLogo,
+    IconLogo,
   },
   data() {
     return {
@@ -68,6 +68,7 @@ export default {
 <style lang="postcss" scoped>
 header {
   display: flex;
+  @mixin center;
 }
 
 .content {
