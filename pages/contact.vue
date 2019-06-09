@@ -12,7 +12,7 @@ export default {
     BlockContact,
   },
   meta: {
-    step: 4,
+    step: 5,
   },
   head() {
     return {

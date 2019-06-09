@@ -33,8 +33,15 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/contact">
+        <nuxt-link to="/reviews">
           <span class="title" :class="{ 'link-active': isCurrentStep(4) }">
+            {{ $t('reviews') }}
+          </span>
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/contact">
+          <span class="title" :class="{ 'link-active': isCurrentStep(5) }">
             {{ $t('contact') }}
           </span>
         </nuxt-link>

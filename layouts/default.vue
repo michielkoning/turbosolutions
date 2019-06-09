@@ -28,7 +28,7 @@ export default {
 
 <style lang="postcss" scoped>
 main {
-  padding-top: 2em;
+  padding-top: 3em;
   @media (--navigation-position-left) {
     padding-top: 0;
   }

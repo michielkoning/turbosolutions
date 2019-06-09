@@ -65,6 +65,10 @@ ul {
   @mixin list-reset;
 }
 
+li {
+  padding-bottom: 0.25em;
+}
+
 .company-address >>> a,
 a {
   box-shadow: 0 1px 0 0 var(--color-white);

@@ -1,18 +1,18 @@
 <template>
   <div>
-    <block-what-we-do />
+    <block-reviews />
   </div>
 </template>
 
 <script>
-import BlockWhatWeDo from '@/components/blocks/BlockWhatWeDo.vue'
+import BlockReviews from '@/components/blocks/BlockReviews.vue'
 
 export default {
   components: {
-    BlockWhatWeDo,
+    BlockReviews,
   },
   meta: {
-    step: 2,
+    step: 4,
   },
   head() {
     return {

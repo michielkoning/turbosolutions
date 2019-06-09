@@ -19,7 +19,10 @@ export default {
 
 <style lang="postcss" scoped>
 section {
-  padding: 3em 0;
+  padding: 1.5em 0;
+  @media (--viewport-md) {
+    padding: 3em 0;
+  }
 }
 
 .wrapper {
