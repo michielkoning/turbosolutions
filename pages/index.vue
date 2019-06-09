@@ -1,26 +1,19 @@
 <template>
-  <app-page title="Get to know us">
-    <h2>See our</h2>
+  <div>
+    <home-intro />
 
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti earum
-      iusto impedit id saepe nulla rerum, libero quaerat excepturi ipsam
-      voluptas tenetur pariatur eos. Numquam deserunt aliquid officia doloremque
-      cumque?
-    </p>
-
-    <form-contact />
-  </app-page>
+    <block-form-contact />
+  </div>
 </template>
 
 <script>
-import AppPage from '@/components/AppPage.vue'
-import FormContact from '@/components/FormContact.vue'
+import BlockFormContact from '@/components/blocks/BlockFormContact.vue'
+import HomeIntro from '@/components/Home/HomeIntro.vue'
 
 export default {
   components: {
-    AppPage,
-    FormContact,
+    BlockFormContact,
+    HomeIntro,
   },
   meta: {
     step: 0,

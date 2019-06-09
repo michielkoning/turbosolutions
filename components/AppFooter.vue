@@ -25,7 +25,7 @@ footer {
 }
 
 .wrapper {
-  @mixin center;
+  @mixin center var(--container-width-lg);
   padding-top: 3em;
   padding-bottom: 3em;
 }

@@ -2,7 +2,9 @@
   <header>
     <skip-links />
     <mobile-navigation @toggleMenu="toggleMenu" />
-    <icon-logo aria-hidden="true" width="156" height="88" />
+    <nuxt-link to="/">
+      <icon-logo aria-hidden="true" width="156" height="88" />
+    </nuxt-link>
 
     <transition
       name="fade2"
