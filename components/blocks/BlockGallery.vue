@@ -28,6 +28,7 @@ export default {
   display: grid;
   grid-gap: 0.25em;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 6em 6em;
   grid-template-areas:
     'title title title'
     '. image-2 image-3'
@@ -35,6 +36,7 @@ export default {
 
   @media (--viewport-md) {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 12em);
     grid-template-areas:
       'title image-2 image-3'
       'image-1 image-2 image-3';
