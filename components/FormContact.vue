@@ -32,7 +32,7 @@
         type="message"
         title="Bericht"
       />
-      <button type="submit">Send</button>
+      <button type="submit" class="btn">Send</button>
     </form-fieldset>
   </form>
 </template>
@@ -54,9 +54,9 @@ export default {
     return {
       submitted: false,
       form: {
-        name: 'michiel',
-        email: 'mail@michielkoning.nl',
-        message: 'bericht',
+        name: '',
+        email: '',
+        message: '',
       },
     }
   },

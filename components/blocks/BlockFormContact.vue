@@ -19,6 +19,7 @@
 <script>
 import FormContact from '@/components/FormContact.vue'
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
+
 export default {
   components: {
     FormContact,

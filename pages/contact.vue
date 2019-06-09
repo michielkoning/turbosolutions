@@ -1,17 +1,15 @@
 <template>
-  <app-page :title="$t('contact')">
-    <form-contact />
-  </app-page>
+  <div>
+    <block-contact />
+  </div>
 </template>
 
 <script>
-import AppPage from '@/components/AppPage.vue'
-import FormContact from '@/components/FormContact.vue'
+import BlockContact from '@/components/blocks/BlockContact.vue'
 
 export default {
   components: {
-    AppPage,
-    FormContact,
+    BlockContact,
   },
   meta: {
     step: 4,
