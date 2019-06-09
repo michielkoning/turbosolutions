@@ -19,6 +19,7 @@ export default {
 
 <style lang="postcss" scoped>
 main {
+  @mixin center var(--container-width-lg);
   padding: 2em var(--gutter);
 }
 </style>
