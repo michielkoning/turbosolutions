@@ -22,6 +22,7 @@
         </transition>
       </div>
     </transition>
+    <img src="/icons/triangle.svg" alt="" class="triangle" />
   </header>
 </template>
 
@@ -148,6 +149,18 @@ a {
   display: none;
   @media (--navigation-position-left) {
     display: block;
+  }
+}
+
+.triangle {
+  display: none;
+  @media (--viewport-lg) {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 20em;
+    width: 10vw;
+    height: auto;
   }
 }
 </style>
