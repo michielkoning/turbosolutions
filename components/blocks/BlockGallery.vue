@@ -26,20 +26,19 @@ export default {
 <style lang="postcss" scoped>
 .gallery {
   display: grid;
-  grid-gap: 0.25em;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 6em 6em;
+  grid-template-columns: 1fr 1em 1fr 1fr;
+  grid-template-rows: auto 20vw 20vw;
   grid-template-areas:
-    'title title title'
-    '. image-2 image-3'
-    'image-1 image-2 image-3';
+    'title  title title title'
+    '.  image-2 image-2 image-3'
+    'image-1 image-2 image-2 image-3';
 
   @media (--viewport-md) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1em 1fr 1fr;
     grid-template-rows: repeat(2, 12em);
     grid-template-areas:
-      'title image-2 image-3'
-      'image-1 image-2 image-3';
+      'title image-2 image-2 image-3'
+      'image-1 image-2 image-2 image-3';
   }
 }
 
@@ -51,6 +50,8 @@ export default {
 
 .image-1 {
   grid-area: image-1;
+  grid-column: 1 / 3;
+  z-index: 1;
 }
 
 .image-2 {
