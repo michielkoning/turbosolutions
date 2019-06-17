@@ -51,7 +51,7 @@ export default {
 .image-1 {
   grid-area: image-1;
   grid-column: 1 / 3;
-  z-index: 1;
+  z-index: var(--gallery-photo-1);
 }
 
 .image-2 {
