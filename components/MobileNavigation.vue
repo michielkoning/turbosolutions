@@ -89,4 +89,8 @@ svg {
   margin-right: 0.25em;
   fill: var(--color-white);
 }
+
+.logo {
+  height: 100%;
+}
 </style>
