@@ -1,27 +1,36 @@
 <template>
   <header>
-    <skip-links />
-    <mobile-navigation @toggleMenu="toggleMenu" />
-    <nuxt-link to="/">
-      <icon-logo class="logo" aria-hidden="true" width="156" height="88" />
-      <span class="sr-only">Turbo Solutions</span>
-    </nuxt-link>
+    <div class="header-wrapper">
+      <skip-links />
+      <mobile-navigation @toggleMenu="toggleMenu" />
+      <nuxt-link class="logo-wrapper" to="/">
+        <icon-logo class="logo" aria-hidden="true" width="156" height="88" />
+        <span class="sr-only">Turbo Solutions</span>
+      </nuxt-link>
 
-    <transition
-      name="fade2"
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-      @before-leave="beforeLeave"
-    >
-      <div v-show="showMenu" class="bg">
-        <transition name="fade">
-          <div v-show="showMenu" ref="bg" class="content">
-            <main-navigation />
-            <app-usps class="usps" />
-          </div>
-        </transition>
-      </div>
-    </transition>
+      <icon-header-bow
+        class="header-bow"
+        aria-hidden="true"
+        width="313"
+        height="207"
+      />
+
+      <transition
+        name="fade2"
+        @after-enter="afterEnter"
+        @after-leave="afterLeave"
+        @before-leave="beforeLeave"
+      >
+        <div v-show="showMenu" class="bg">
+          <transition name="fade">
+            <div v-show="showMenu" ref="bg" class="content">
+              <main-navigation />
+              <app-usps class="usps" />
+            </div>
+          </transition>
+        </div>
+      </transition>
+    </div>
     <img src="/icons/triangle.svg" alt="" class="triangle" />
   </header>
 </template>
@@ -32,6 +41,7 @@ import MainNavigation from '@/components/MainNavigation.vue'
 import AppUsps from '@/components/AppUsps.vue'
 import MobileNavigation from '@/components/MobileNavigation.vue'
 import IconLogo from '@/assets/icons/logo.svg'
+import IconHeaderBow from '@/assets/icons/header-bow.svg'
 
 const bodyScrollLock = require('body-scroll-lock')
 
@@ -42,6 +52,7 @@ export default {
     MobileNavigation,
     AppUsps,
     IconLogo,
+    IconHeaderBow,
   },
   data() {
     return {
@@ -71,6 +82,10 @@ export default {
 
 <style lang="postcss" scoped>
 header {
+  background: linear-gradient(90deg, transparent 50%, var(--color-primary) 50%);
+}
+
+.header-wrapper {
   display: flex;
   @mixin center;
 }
@@ -83,13 +98,14 @@ header {
   max-height: 100vh;
 
   @media (--navigation-position-left) {
-    padding: var(--gutter);
+    padding: 1em var(--gutter) 2em 0;
     flex-direction: column;
     overflow: visible;
     transform: translateY(0);
     display: flex !important;
     align-items: flex-end;
     max-height: none;
+    justify-content: space-around;
   }
 }
 
@@ -97,13 +113,13 @@ header {
   order: -1;
 }
 
-a {
+.logo-wrapper {
   @mixin link-reset;
+  flex: 0 0 auto;
 }
 
 .bg {
   flex: 1 1 auto;
-  background: var(--color-primary);
   position: fixed;
   top: 0;
   left: 0;
@@ -113,13 +129,14 @@ a {
   overflow: hidden;
   z-index: var(--main-navigation);
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background: var(--color-primary);
 
   @media (--navigation-position-left) {
     height: auto;
     position: static;
     padding: 0;
     overflow: visible;
-    display: block !important;
+    display: flex !important;
   }
 }
 
@@ -144,6 +161,10 @@ a {
   transform: translateY(-100vh);
 }
 
+.logo-wrapper {
+  align-self: center;
+}
+
 .logo {
   fill: var(--color-primary);
   display: none;
@@ -162,5 +183,10 @@ a {
     width: 10vw;
     height: auto;
   }
+}
+
+.header-bow {
+  flex: 0 0 auto;
+  fill: var(--color-primary);
 }
 </style>

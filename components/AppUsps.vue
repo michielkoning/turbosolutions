@@ -32,6 +32,8 @@ export default {
 <style lang="postcss" scoped>
 ul {
   @mixin list-reset;
+
+  font-size: 0.9em;
   text-transform: uppercase;
   margin-top: 1em;
 

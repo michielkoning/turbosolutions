@@ -132,7 +132,6 @@ a {
   display: flex;
   position: relative;
   text-decoration: none;
-  font-size: 1.2em;
   line-height: 1.1;
   padding: 0.45em 0;
   border-bottom: 1px dashed var(--color-gray);
