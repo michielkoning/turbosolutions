@@ -1,5 +1,5 @@
 <template>
-  <GmapMap :options="options" :center="position" :zoom="12" class="map">
+  <GmapMap :center="position" :zoom="12" class="map">
     <GmapMarker :position="position"></GmapMarker>
   </GmapMap>
 </template>
