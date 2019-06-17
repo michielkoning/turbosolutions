@@ -65,9 +65,9 @@ ul {
 }
 
 li {
-  margin-bottom: 1em;
-  padding: 1em;
+  padding: calc(var(--gutter) / 2);
   background: #f2f4fb;
+  margin: 0 calc(var(--gutter) / -2) 1em;
 
   &:nth-child(2n) {
     background: #dadef2;

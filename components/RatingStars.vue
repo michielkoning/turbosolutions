@@ -1,7 +1,7 @@
 <template>
   <div class="stars">
     <rating-star v-for="(star, index) in stars" :key="index" :star="star" />
-    <span class="sr-only">{{ rating }} Stars</span>
+    <span class="sr-only">{{ rating }} out of 5 stars</span>
   </div>
 </template>
 
