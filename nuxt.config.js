@@ -1,12 +1,8 @@
-import axios from 'axios'
 import pkg from './package'
-const baseUrl = 'https://api.nordgarden.michielkoning.nl/wp-json/'
+const baseUrl = 'https://turbosolutions.michielkoning.nl/'
 
 export default {
   mode: 'universal',
-  env: {
-    baseUrl,
-  },
   /*
    ** Headers of the page
    */
@@ -99,5 +95,8 @@ export default {
         },
       },
     },
+  },
+  sitemap: {
+    hostname: baseUrl,
   },
 }
