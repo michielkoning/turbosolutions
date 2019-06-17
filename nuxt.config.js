@@ -9,10 +9,6 @@ export default {
   head: {
     titleTemplate: '%s | Turbo Solutions Europe',
     meta: [
-      {
-        name: 'google-site-verification',
-        content: 'm5KnTheFv6KKmsc31UCOYs65D7ndwyyW8hkXLKKz5u8',
-      },
       { charset: 'utf-8' },
       {
         name: 'viewport',
