@@ -35,8 +35,10 @@ ul {
 
   text-transform: uppercase;
   margin-top: 1em;
-  font-size: 0.8em;
-
+  font-size: 0.9em;
+  @media (--viewport-md) {
+    font-size: 0.8em;
+  }
   @media (--viewport-lg) {
     font-size: 0.9em;
   }

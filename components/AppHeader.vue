@@ -8,8 +8,7 @@
         <span class="sr-only">Turbo Solutions</span>
       </nuxt-link>
 
-      <img src="/icons/header-bow.svg" alt="" class="header-bow" />
-      <icon-header-bow class="header-bow2" aria-hidden="true" />
+      <icon-header-bow aria-hidden="true" class="header-bow" />
 
       <transition
         name="fade2"
@@ -27,7 +26,7 @@
         </div>
       </transition>
     </div>
-    <img src="/icons/triangle.svg" alt="" class="triangle" />
+    <icon-triangle class="triangle" aria-hidden="true" />
   </header>
 </template>
 
@@ -37,6 +36,7 @@ import MainNavigation from '@/components/MainNavigation.vue'
 import AppUsps from '@/components/AppUsps.vue'
 import MobileNavigation from '@/components/MobileNavigation.vue'
 import IconLogo from '@/assets/icons/logo.svg'
+import IconTriangle from '@/assets/icons/triangle.svg'
 import IconHeaderBow from '@/assets/icons/header-bow.svg'
 
 const bodyScrollLock = require('body-scroll-lock')
@@ -48,6 +48,7 @@ export default {
     MobileNavigation,
     AppUsps,
     IconLogo,
+    IconTriangle,
     IconHeaderBow,
   },
   data() {
@@ -101,7 +102,7 @@ header {
   max-height: 100vh;
 
   @media (--show-full-navigation) {
-    padding: 1em var(--gutter) 2em 0;
+    padding: 1em var(--gutter) 1em 0;
     flex-direction: column;
     overflow: visible;
     transform: translateY(0);
@@ -189,16 +190,12 @@ header {
   }
 }
 
-.header-bow2 {
-  display: none;
-}
-
 .header-bow {
   flex: 1 0 auto;
   fill: var(--color-primary);
   display: none;
   width: 15vw;
-
+  max-width: 13em;
   @media (--show-full-navigation) {
     display: block;
   }

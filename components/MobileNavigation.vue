@@ -10,6 +10,15 @@
           <icon-bars aria-hidden="true" width="24" height="24" />
           {{ $t('menu') }}
         </button>
+        <nuxt-link class="logo-wrapper" to="/">
+          <icon-logo-white
+            class="logo"
+            height="44"
+            width="78"
+            aria-hidden="true"
+          />
+          <span class="sr-only">Turbo Solutions</span>
+        </nuxt-link>
       </div>
     </notch-wrapper>
   </div>
@@ -18,11 +27,13 @@
 <script>
 import IconBars from '@/assets/icons/bars.svg'
 import NotchWrapper from '@/components/NotchWrapper.vue'
+import IconLogoWhite from '@/assets/icons/logo-white.svg'
 
 export default {
   components: {
     IconBars,
     NotchWrapper,
+    IconLogoWhite,
   },
   data() {
     return {
@@ -76,5 +87,6 @@ export default {
 
 svg {
   margin-right: 0.25em;
+  fill: var(--color-white);
 }
 </style>

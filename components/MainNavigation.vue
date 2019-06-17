@@ -99,7 +99,9 @@ export default {
 <style lang="postcss" scoped>
 nav {
   position: relative;
-  font-size: 0.9em;
+  @media (--viewport-md) {
+    font-size: 0.9em;
+  }
   @media (--viewport-lg) {
     font-size: 1em;
   }
