@@ -66,7 +66,6 @@ export default {
   background: var(--color-primary);
   z-index: var(--mobile-navigation);
   border-bottom: 2px solid var(--color-white);
-
   @media (--show-full-navigation) {
     display: none;
   }
@@ -75,6 +74,12 @@ export default {
 .buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .btn {
@@ -88,9 +93,5 @@ export default {
 svg {
   margin-right: 0.25em;
   fill: var(--color-white);
-}
-
-.logo {
-  height: 100%;
 }
 </style>

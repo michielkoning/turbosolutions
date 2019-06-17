@@ -65,7 +65,7 @@ ul {
 }
 
 li {
-  padding: calc(var(--gutter) / 2);
+  padding: var(--gutter) calc(var(--gutter) / 2);
   background: #f2f4fb;
   margin: 0 calc(var(--gutter) / -2) 1em;
 
