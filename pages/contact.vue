@@ -1,23 +1,18 @@
 <template>
   <div>
-    <iframe
-      width="600"
-      height="450"
-      frameborder="0"
-      style="border:0"
-      src="https://www.google.com/maps/embed/v1/search?q=wageningen&key=AIzaSyA47B7McccErX6_KASOTpSYDFUrcJiXAoI"
-      allowfullscreen
-    ></iframe>
     <block-contact />
+    <block-map />
   </div>
 </template>
 
 <script>
 import BlockContact from '@/components/blocks/BlockContact.vue'
+import BlockMap from '@/components/blocks/BlockMap.vue'
 
 export default {
   components: {
     BlockContact,
+    BlockMap,
   },
   meta: {
     step: 5,

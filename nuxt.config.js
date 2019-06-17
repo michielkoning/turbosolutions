@@ -42,7 +42,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/i18n.js', '~/plugins/axios', '~/plugins/vuelidate'],
+  plugins: [
+    '~/plugins/i18n.js',
+    '~/plugins/axios',
+    '~/plugins/vuelidate',
+    '~/plugins/google-maps',
+  ],
 
   /*
    ** Nuxt.js modules
@@ -79,6 +84,8 @@ export default {
         })
       }
     },
+    transpile: [/^vue2-google-maps($|\/)/],
+
     postcss: {
       plugins: {
         'postcss-mixins': {
