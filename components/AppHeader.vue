@@ -8,12 +8,8 @@
         <span class="sr-only">Turbo Solutions</span>
       </nuxt-link>
 
-      <icon-header-bow
-        class="header-bow"
-        aria-hidden="true"
-        width="313"
-        height="207"
-      />
+      <img src="/icons/header-bow.svg" alt="" class="header-bow" />
+      <icon-header-bow class="header-bow2" aria-hidden="true" />
 
       <transition
         name="fade2"
@@ -82,7 +78,14 @@ export default {
 
 <style lang="postcss" scoped>
 header {
-  background: linear-gradient(90deg, transparent 50%, var(--color-primary) 50%);
+  background: var(--color-primary);
+  @media (--show-full-navigation) {
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      var(--color-primary) 50%
+    );
+  }
 }
 
 .header-wrapper {
@@ -97,7 +100,7 @@ header {
   -webkit-overflow-scrolling: touch;
   max-height: 100vh;
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     padding: 1em var(--gutter) 2em 0;
     flex-direction: column;
     overflow: visible;
@@ -106,6 +109,7 @@ header {
     align-items: flex-end;
     max-height: none;
     justify-content: space-around;
+    flex: 1 0 auto;
   }
 }
 
@@ -131,7 +135,7 @@ header {
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
   background: var(--color-primary);
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     height: auto;
     position: static;
     padding: 0;
@@ -168,7 +172,7 @@ header {
 .logo {
   fill: var(--color-primary);
   display: none;
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     display: block;
   }
 }
@@ -185,8 +189,18 @@ header {
   }
 }
 
+.header-bow2 {
+  display: none;
+}
+
 .header-bow {
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   fill: var(--color-primary);
+  display: none;
+  width: 15vw;
+
+  @media (--show-full-navigation) {
+    display: block;
+  }
 }
 </style>

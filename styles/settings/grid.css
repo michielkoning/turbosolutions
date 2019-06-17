@@ -8,7 +8,7 @@
   --width-navigation-left: 20rem;
   --gutter: 1em;
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     --gutter: 2em;
   }
 }

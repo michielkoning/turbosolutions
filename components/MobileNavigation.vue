@@ -56,7 +56,7 @@ export default {
   z-index: var(--mobile-navigation);
   border-bottom: 2px solid var(--color-white);
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     display: none;
   }
 }

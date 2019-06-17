@@ -99,6 +99,10 @@ export default {
 <style lang="postcss" scoped>
 nav {
   position: relative;
+  font-size: 0.9em;
+  @media (--viewport-lg) {
+    font-size: 1em;
+  }
 }
 
 ul {
@@ -106,7 +110,7 @@ ul {
 
   border-top: 1px dashed var(--color-gray);
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     display: flex;
     border-top: 0;
   }
@@ -119,7 +123,7 @@ ul {
   }
 }
 
-@media (--navigation-position-left) {
+@media (--show-full-navigation) {
   li + li {
     margin-left: 1em;
   }
@@ -142,7 +146,7 @@ a {
       box-shadow: 0 3px 0 0 var(--color-primary);
     }
   }
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     border-bottom: 0;
     padding: 0.25em 0;
   }
@@ -153,7 +157,7 @@ a {
   background: currentColor;
   display: none;
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     display: block;
   }
   &.active {

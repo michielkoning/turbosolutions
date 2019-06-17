@@ -29,7 +29,7 @@ export default {
 <style lang="postcss" scoped>
 main {
   padding-top: 3em;
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     padding-top: 0;
   }
 }

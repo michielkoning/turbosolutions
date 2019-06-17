@@ -33,11 +33,14 @@ export default {
 ul {
   @mixin list-reset;
 
-  font-size: 0.9em;
   text-transform: uppercase;
   margin-top: 1em;
+  font-size: 0.8em;
 
-  @media (--navigation-position-left) {
+  @media (--viewport-lg) {
+    font-size: 0.9em;
+  }
+  @media (--show-full-navigation) {
     margin-top: 0;
     display: flex;
   }
@@ -47,7 +50,7 @@ li {
   display: flex;
   margin-bottom: 0.5em;
 
-  @media (--navigation-position-left) {
+  @media (--show-full-navigation) {
     & + li {
       margin-left: 1em;
     }
