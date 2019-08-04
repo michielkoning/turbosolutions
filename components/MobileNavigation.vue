@@ -8,7 +8,7 @@
           @click="toggleMenu(!menuIsExpanded)"
         >
           <icon-bars aria-hidden="true" width="24" height="24" />
-          {{ $t('menu') }}
+          {{ $t('header.menu') }}
         </button>
         <nuxt-link class="logo-wrapper" to="/">
           <icon-logo-white

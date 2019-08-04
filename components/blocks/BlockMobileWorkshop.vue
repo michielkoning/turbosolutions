@@ -2,10 +2,10 @@
   <block-wrapper>
     <div class="wrapper">
       <div class="text">
-        <h1>{{ $t('pages.home.mobileWorkshop.title') }}</h1>
-        <h2>{{ $t('pages.home.mobileWorkshop.intro') }}</h2>
+        <h1>{{ $t('blocks.mobileWorkshop.title') }}</h1>
+        <h2>{{ $t('blocks.mobileWorkshop.intro') }}</h2>
         <p>
-          {{ $t('pages.home.mobileWorkshop.text') }}
+          {{ $t('blocks.mobileWorkshop.text') }}
         </p>
       </div>
       <div class="image-wrapper">

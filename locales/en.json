@@ -1,60 +1,96 @@
 {
   "pages": {
     "home": {
-      "gallery": {
-        "title": "Gamechanging service for turbochargers"
-      },
-      "mobileWorkshop": {
-        "title": "Mobile workshop",
-        "intro": "See our Gamechanging Service for Turbochargers live in action",
-        "text": "Our mobile workshop concept includes a mobile container, fully equipped with state-of-the-art maintenance tools, uniquely designed for flexible operation in various applications, locations and conditions. The workshop is custom-made and can contain any equipment, requested by the customer. The workshop solutions are quick and easy to set up, and ready to use right away."
-      }
+      "menuTitle": "Home",
+      "title": "Gamechanging service for turbochargers"
     },
     "getToKnowUs": {
       "title": "Get to know us",
-      "payoff": "An international supplier of service for your turbocharger",
+      "menuTitle": "Get to know us",
+      "intro": "An international supplier of service for your turbocharger",
       "text": {
         "top": "Turbo Solutions Europe is your ideal partner when it comes to high-quality maintenance in a durable way. We started years ago in Spain, just near the coastal area of Barcelona in front of the sea and in between powerplants.",
-
         "bottom": "We grow constantly and have sales offices in Spain, Panama, Dominican Republic and, on every strategic location in Europe, Latin America and the Caribbean. Close cooperation with local agents around the world helps us serve our customers independent of their location."
       }
+    },
+    "whatWeDo": {
+      "title": "What we do",
+      "menuTitle": "What we do",
+      "intro": "We maintain your engines with high-quality equipment for ages now.",
+      "text": [
+        "Our customers are mainly engine builders, ship owners, shipyards and power plants. Our mission is to enable them to overhaul their engines to provide them with state-of-the-art engine care solutions to optimize the running of their engines in order to save time and money with minimum environmental impact.",
+        "We offer six services to our customers:"
+      ],
+      "list": [
+        "Monitoring",
+        "Cleaning",
+        "Grinding & Machining",
+        "Fuel System Maintenance",
+        "Power Packs",
+        "Accessories & Consumables"
+      ]
+    },
+    "mobileWorkshop": {
+      "title": "Mobile workshop",
+      "menuTitle": "Mobile workshop"
+    },
+    "reviews": {
+      "title": "Reviews",
+      "menuTitle": "Reviews",
+      "intro": "Read what people are saying about our company and service.",
+      "text": {
+        "part1": "If you want to share your honest opinion about our company and service, please feel free to contact us by sending your review. You can also use the contactform at the ",
+        "part2": "Contactpage",
+        "part3": "."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "menuTitle": "Contact"
     }
   },
 
-  "footer": {
+  "blocks": {
     "contact": {
       "title": "Make an appointment today",
-      "text": "Call us: +34 674 14 71 73 or send an e-mail: dexter@turbosolutionseurope.com"
+      "text": {
+        "part1": "Call us: ",
+        "part2": " or send an e-mail: ",
+        "part3": "."
+      }
+    },
+    "mobileWorkshop": {
+      "title": "Mobile workshop",
+      "intro": "See our Gamechanging Service for Turbochargers live in action",
+      "text": "Our mobile workshop concept includes a mobile container, fully equipped with state-of-the-art maintenance tools, uniquely designed for flexible operation in various applications, locations and conditions. The workshop is custom-made and can contain any equipment, requested by the customer. The workshop solutions are quick and easy to set up, and ready to use right away."
+    },
+    "socialMedia": {
+      "title": "Follow us on",
+      "viewUsOn": "View %{companyName} on"
+    },
+    "links": {
+      "title": "Links"
+    }
+  },
+  "address": {
+    "title": "Adres",
+    "companyName": "Turbo solutions",
+    "street": "Street",
+    "city": "City",
+    "zipcode": "Zipcode",
+    "phoneNumber": "+34 674 14 71 73",
+    "email": "dexter@turbosolutionseurope.com"
+  },
+  "header": {
+    "mainNavigation": "Main navigation",
+    "menu": "Menu",
+    "usps": {
+      "quality": "The best quality",
+      "stock": "The best quality",
+      "service": "24/7 service"
     }
   },
 
-  "albums": "Albums",
-  "biography": "Biography",
-  "contact": "Contact",
-  "close": "Close",
-  "home": "Home",
-  "latestPosts": "Latest posts",
-  "loadMore": "Load more",
-  "loading": "Loading…",
-  "next": "Next",
-  "noTourDays": "No tour dates confirmed",
-  "pause": "Pause",
-  "play": "Play",
-  "readMore": "Read more",
-  "tour": "Tour",
-  "videos": "Videos",
-  "viewNordgardenOn": "View Nordgarden on",
-  "socialMediaLinks": "Follow us on",
-  "mainNavigation": "Main navigation",
-  "readFullBiography": "Read the full biography",
-  "view": "view",
-  "on": "on",
-  "menu": "Menu",
-  "gallery": "Gallery",
-  "getToKnowUs": "Get to know us",
-  "whatWeDo": "What we do",
-  "reviews": "Reviews",
-  "mobileWorkshop": "Mobile workshop",
   "form": {
     "name": "Voornaam",
     "lastName": "Achternaam",

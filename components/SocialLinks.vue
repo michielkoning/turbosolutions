@@ -1,25 +1,46 @@
 <template>
   <nav aria-labelledby="social-links-title">
     <h2 id="social-links-title">
-      {{ $t('socialMediaLinks') }}
+      {{ $t('blocks.socialMedia.title') }}
     </h2>
     <ul class="social-links">
       <li>
         <a href="#" rel="noopener" target="_blank">
           <icon-facebook aria-hidden="true" width="32" height="32" />
-          <span class="sr-only">View Turbosolutions on facebook</span>
+          <span class="sr-only">
+            {{
+              $t('blocks.socialMedia.viewUsOn', {
+                companyName: $t('address.companyName'),
+              })
+            }}
+            Facebook</span
+          >
         </a>
       </li>
       <li>
         <a href="#" rel="noopener" target="_blank">
           <icon-twitter aria-hidden="true" width="32" height="32" />
-          <span class="sr-only">View Turbosolutions on twitter</span>
+          <span class="sr-only">
+            {{
+              $t('blocks.socialMedia.viewUsOn', {
+                companyName: $t('address.companyName'),
+              })
+            }}
+            Twitter</span
+          >
         </a>
       </li>
       <li>
         <a href="#" rel="noopener" target="_blank">
           <icon-linkedin aria-hidden="true" width="32" height="32" />
-          <span class="sr-only">View Turbosolutions on LinkedIn</span>
+          <span class="sr-only">
+            {{
+              $t('blocks.socialMedia.viewUsOn', {
+                companyName: $t('address.companyName'),
+              })
+            }}
+            LinkedIn</span
+          >
         </a>
       </li>
     </ul>

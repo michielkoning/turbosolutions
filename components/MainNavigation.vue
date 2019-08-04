@@ -1,48 +1,48 @@
 <template>
   <nav aria-labelledby="menu-title">
     <h2 id="menu-title" class="sr-only" tabindex="-1">
-      {{ $t('mainNavigation') }}
+      {{ $t('header.mainNavigation') }}
     </h2>
     <ul ref="list">
       <li>
         <nuxt-link id="menu" to="/">
           <span class="title" :class="{ 'link-active': isCurrentStep(0) }">{{
-            $t('home')
+            $t('pages.home.menuTitle')
           }}</span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/get-to-know-us">
           <span class="title" :class="{ 'link-active': isCurrentStep(1) }">
-            {{ $t('getToKnowUs') }}
+            {{ $t('pages.getToKnowUs.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/what-we-do">
           <span class="title" :class="{ 'link-active': isCurrentStep(2) }">
-            {{ $t('whatWeDo') }}
+            {{ $t('pages.whatWeDo.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/mobile-workshop">
           <span class="title" :class="{ 'link-active': isCurrentStep(3) }">
-            {{ $t('mobileWorkshop') }}
+            {{ $t('pages.mobileWorkshop.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/reviews">
           <span class="title" :class="{ 'link-active': isCurrentStep(4) }">
-            {{ $t('reviews') }}
+            {{ $t('pages.reviews.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/contact">
           <span class="title" :class="{ 'link-active': isCurrentStep(5) }">
-            {{ $t('contact') }}
+            {{ $t('pages.contact.menuTitle') }}
           </span>
         </nuxt-link>
       </li>

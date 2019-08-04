@@ -2,15 +2,15 @@
   <ul>
     <li>
       <icon-star-empty aria-hidden="true" width="26" height="26" />
-      <span class="title">The best quality</span>
+      <span class="title">{{ $t('header.usps.quality') }}</span>
     </li>
     <li>
       <icon-spare-parts aria-hidden="true" width="24" height="24" />
-      <span class="title">Spare parts always in stock</span>
+      <span class="title">{{ $t('header.usps.stock') }}</span>
     </li>
     <li>
       <icon-service aria-hidden="true" width="24" height="24" />
-      <span class="title">24/7 service</span>
+      <span class="title">{{ $t('header.usps.service') }}</span>
     </li>
   </ul>
 </template>

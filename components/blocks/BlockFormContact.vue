@@ -1,16 +1,19 @@
 <template>
   <block-wrapper class="block-form-contact">
-    <h1>{{ $t('footer.contact.title') }}</h1>
+    <h1>{{ $t('blocks.contact.title') }}</h1>
     <div class="wrapper">
       <div class="text">
         <p>
-          Call us: <a href="tel:+34 674 14 71 73">+34 674 14 71 73</a> or send
-          an e-mail:
-          <a href="mailto:dexter@turbosolutionseurope.com"
-            >dexter@turbosolutionseurope.com</a
-          >
+          {{ $t('blocks.contact.text.part1') }}
+          <a :href="`tel:${$t('address.phoneNumber')}`">{{
+            $t('address.phoneNumber')
+          }}</a>
+          {{ $t('blocks.contact.text.part2') }}
+          <a :href="`mailto:${$t('address.email')}`">{{
+            $t('address.email')
+          }}</a
+          >{{ $t('blocks.contact.text.part3') }}
         </p>
-        <p>{{ $t('footer.contact.text') }}</p>
       </div>
       <form-contact class="form" />
     </div>

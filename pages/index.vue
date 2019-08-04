@@ -19,7 +19,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('home'),
+      title: this.$t('pages.home.title'),
     }
   },
 }

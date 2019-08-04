@@ -1,7 +1,7 @@
 <template>
   <block-wrapper>
     <skip-link-title class="title" :title="$t('getToKnowUs')" />
-    <h2>{{ $t('pages.getToKnowUs.payoff') }}</h2>
+    <h2>{{ $t('pages.getToKnowUs.intro') }}</h2>
 
     <p>{{ $t('pages.getToKnowUs.text.top') }}</p>
     <div class="image-wrapper">

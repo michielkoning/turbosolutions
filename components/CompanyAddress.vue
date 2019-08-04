@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Adres</h2>
+    <h2>{{ $t('address.title') }}</h2>
     <address itemscope itemtype="http://schema.org/Organization">
       <p
         itemprop="address"
@@ -9,23 +9,26 @@
       >
         <span class="text">
           <icon-building aria-hidden="true" width="20" height="20" />
-          <span itemprop="name">Turbo solutions</span><br />
-          <span itemprop="streetAddress">Street</span><br />
-          <span itemprop="locality">City</span>,
-          <span itemprop="postal-code">Zipcode</span>
+          <span itemprop="name">{{ $t('address.companyName') }}</span>
+          <br />
+          <span itemprop="streetAddress">{{ $t('address.street') }}</span
+          ><br />
+          <span itemprop="locality">{{ $t('address.city') }}</span
+          >,
+          <span itemprop="postal-code">{{ $t('address.zipcode') }}</span>
         </span>
       </p>
       <p>
         <span class="text">
           <icon-envelope aria-hidden="true" width="20" height="20" />
-          <a href="tel:+34 674 14 71 73" itemprop="telephone">
-            +34 674 14 71 73
+          <a :href="`tel:${$t('address.phoneNumber')}`" itemprop="telephone">
+            {{ $t('address.phoneNumber') }}
           </a>
         </span>
         <span class="text">
           <icon-phone aria-hidden="true" width="20" height="20" />
-          <a href="mailto:dexter@turbosolutionseurope.com" itemprop="email"
-            >dexter@turbosolutionseurope.com
+          <a :href="`mailto:${$t('address.email')}`" itemprop="email"
+            >{{ $t('address.email') }}
           </a>
         </span>
       </p>

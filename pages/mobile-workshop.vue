@@ -16,7 +16,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('mobileWorkshop'),
+      title: this.$t('pages.mobileWorkshop.title'),
     }
   },
 }

@@ -1,15 +1,12 @@
 <template>
   <block-wrapper>
-    <h1>Reviews</h1>
+    <h1>{{ $t('pages.reviews.title') }}</h1>
     <h2>Read what people are saying about our company and service.</h2>
-    <p class="intro">
-      We’ve asked our clients to tell us what we can do better and what they
-      think about the service and products we deliver.
-    </p>
+    <p class="intro">{{ $t('pages.reviews.intro') }}</p>
     <p>
-      If you want to share your honest opinion about our company and service,
-      please feel free to contact us by sending your review. You can also use
-      the contactform at the <nuxt-link to="contact">Contactpage</nuxt-link>.
+      {{ $t('pages.reviews.text.part1') }}
+      <nuxt-link to="contact">{{ $t('pages.reviews.text.part2') }}</nuxt-link>
+      {{ $t('pages.reviews.text.part3') }}
     </p>
     <ul>
       <li v-for="review in reviews" :key="review.title">

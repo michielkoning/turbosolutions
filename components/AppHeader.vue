@@ -5,7 +5,7 @@
       <mobile-navigation @toggleMenu="toggleMenu" />
       <nuxt-link class="logo-wrapper" to="/">
         <icon-logo class="logo" aria-hidden="true" width="156" height="88" />
-        <span class="sr-only">Turbo Solutions</span>
+        <span class="sr-only">{{ $t('address.companyName') }}</span>
       </nuxt-link>
 
       <icon-header-bow aria-hidden="true" class="header-bow" />
