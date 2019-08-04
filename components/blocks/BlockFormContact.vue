@@ -1,6 +1,6 @@
 <template>
   <block-wrapper class="block-form-contact">
-    <h1>Make an appointment today</h1>
+    <h1>{{ $t('footer.contact.title') }}</h1>
     <div class="wrapper">
       <div class="text">
         <p>
@@ -10,6 +10,7 @@
             >dexter@turbosolutionseurope.com</a
           >
         </p>
+        <p>{{ $t('footer.contact.text') }}</p>
       </div>
       <form-contact class="form" />
     </div>

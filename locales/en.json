@@ -1,4 +1,33 @@
 {
+  "pages": {
+    "home": {
+      "gallery": {
+        "title": "Gamechanging service for turbochargers"
+      },
+      "mobileWorkshop": {
+        "title": "Mobile workshop",
+        "intro": "See our Gamechanging Service for Turbochargers live in action",
+        "text": "Our mobile workshop concept includes a mobile container, fully equipped with state-of-the-art maintenance tools, uniquely designed for flexible operation in various applications, locations and conditions. The workshop is custom-made and can contain any equipment, requested by the customer. The workshop solutions are quick and easy to set up, and ready to use right away."
+      }
+    },
+    "getToKnowUs": {
+      "title": "Get to know us",
+      "payoff": "An international supplier of service for your turbocharger",
+      "text": {
+        "top": "Turbo Solutions Europe is your ideal partner when it comes to high-quality maintenance in a durable way. We started years ago in Spain, just near the coastal area of Barcelona in front of the sea and in between powerplants.",
+
+        "bottom": "We grow constantly and have sales offices in Spain, Panama, Dominican Republic and, on every strategic location in Europe, Latin America and the Caribbean. Close cooperation with local agents around the world helps us serve our customers independent of their location."
+      }
+    }
+  },
+
+  "footer": {
+    "contact": {
+      "title": "Make an appointment today",
+      "text": "Call us: +34 674 14 71 73 or send an e-mail: dexter@turbosolutionseurope.com"
+    }
+  },
+
   "albums": "Albums",
   "biography": "Biography",
   "contact": "Contact",

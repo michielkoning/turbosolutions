@@ -2,14 +2,10 @@
   <block-wrapper>
     <div class="wrapper">
       <div class="text">
-        <h1>Mobile Workshop</h1>
-        <h2>See our Gamechanging Turbocharger service in action</h2>
+        <h1>{{ $t('pages.home.mobileWorkshop.title') }}</h1>
+        <h2>{{ $t('pages.home.mobileWorkshop.intro') }}</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim.
+          {{ $t('pages.home.mobileWorkshop.text') }}
         </p>
       </div>
       <div class="image-wrapper">
