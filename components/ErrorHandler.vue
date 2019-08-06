@@ -6,7 +6,7 @@
 
         <button v-if="message" type="button" class="dismiss" @click="dismiss">
           <icon-close aria-hidden="true" width="24" height="24" />
-          <span class="sr-only">{{ $t('close') }}</span>
+          <span class="sr-only">{{ $t('errorHandler.close') }}</span>
         </button>
       </div>
     </notch-wrapper>

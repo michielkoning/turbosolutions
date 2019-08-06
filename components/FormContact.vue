@@ -15,14 +15,14 @@
         v-model.trim.lazy="$v.form.name.$model"
         type="text"
         name="name"
-        title="Name"
+        :title="$t('form.fields.name')"
         :error-message="errorMessageName"
       />
       <form-input-text
         v-model.trim.lazy="$v.form.email.$model"
         name="email"
         type="email"
-        title="E-mailaddress"
+        :title="$t('form.fields.email')"
         :error-message="errorMessageEmail"
       />
       <form-textarea
@@ -30,9 +30,9 @@
         name="message"
         rows="4"
         type="message"
-        title="Bericht"
+        :title="$t('form.fields.message')"
       />
-      <button type="submit" class="btn">Send</button>
+      <button type="submit" class="btn">{{ $t('form.buttons.send') }}</button>
     </form-fieldset>
   </form>
 </template>
@@ -75,8 +75,8 @@ export default {
     errorMessageName() {
       if (this.$v.form.name.$anyError) {
         if (!this.$v.form.name.required) {
-          return this.$t('form.error.general.required', {
-            field: this.$t('form.name').toLowerCase(),
+          return this.$t('form.errors.general.required', {
+            field: this.$t('form.fields.name').toLowerCase(),
           })
         }
       }
@@ -85,12 +85,13 @@ export default {
     errorMessageEmail() {
       if (this.$v.form.email.$anyError) {
         if (!this.$v.form.email.required) {
-          return this.$t('form.error.general.required', {
-            field: this.$t('form.email').toLowerCase(),
+          return this.$t('form.errors.general.required', {
+            field: this.$t('form.fields.email').toLowerCase(),
           })
         }
 
-        if (!this.$v.form.email.email) return this.$t('form.error.email.email')
+        if (!this.$v.form.email.email)
+          return this.$t('form.errors.fields.email.invalidEmail')
       }
       return null
     },
