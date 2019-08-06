@@ -1,6 +1,6 @@
 <template>
   <block-wrapper class="block-form-contact">
-    <skip-link-title class="title" :title="$t('contact')" />
+    <skip-link-title class="title" :title="$t('pages.contact.title')" />
     <div class="wrapper">
       <company-address />
       <social-links />

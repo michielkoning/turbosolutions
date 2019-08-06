@@ -14,9 +14,6 @@ export default {
     BlockContact,
     BlockMap,
   },
-  meta: {
-    step: 5,
-  },
   head() {
     return {
       title: this.$t('pages.contact.title'),

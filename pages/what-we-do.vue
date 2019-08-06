@@ -11,9 +11,6 @@ export default {
   components: {
     BlockWhatWeDo,
   },
-  meta: {
-    step: 2,
-  },
   head() {
     return {
       title: this.$t('pages.whatWeDo.title'),

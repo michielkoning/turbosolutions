@@ -11,9 +11,6 @@ export default {
   components: {
     BlockGetToKnowUs,
   },
-  meta: {
-    step: 1,
-  },
   head() {
     return {
       title: this.$t('pages.getToKnowUs.title'),

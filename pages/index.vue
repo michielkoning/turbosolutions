@@ -14,9 +14,6 @@ export default {
     BlockGallery,
     BlockMobileWorkshop,
   },
-  meta: {
-    step: 0,
-  },
   head() {
     return {
       title: this.$t('pages.home.title'),

@@ -11,9 +11,6 @@ export default {
   components: {
     BlockReviews,
   },
-  meta: {
-    step: 4,
-  },
   head() {
     return {
       title: this.$t('pages.reviews.title'),

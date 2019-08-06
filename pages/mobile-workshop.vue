@@ -11,9 +11,6 @@ export default {
   components: {
     BlockMobileWorkshop,
   },
-  meta: {
-    step: 3,
-  },
   head() {
     return {
       title: this.$t('pages.mobileWorkshop.title'),

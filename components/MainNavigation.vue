@@ -3,45 +3,43 @@
     <h2 id="menu-title" class="sr-only" tabindex="-1">
       {{ $t('header.mainNavigation') }}
     </h2>
-    <ul ref="list">
+    <ul ref="menu">
       <li>
         <nuxt-link id="menu" to="/">
-          <span class="title" :class="{ 'link-active': isCurrentStep(0) }">{{
-            $t('pages.home.menuTitle')
-          }}</span>
+          <span class="title">{{ $t('pages.home.menuTitle') }}</span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/get-to-know-us">
-          <span class="title" :class="{ 'link-active': isCurrentStep(1) }">
+          <span class="title">
             {{ $t('pages.getToKnowUs.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/what-we-do">
-          <span class="title" :class="{ 'link-active': isCurrentStep(2) }">
+          <span class="title">
             {{ $t('pages.whatWeDo.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/mobile-workshop">
-          <span class="title" :class="{ 'link-active': isCurrentStep(3) }">
+          <span class="title">
             {{ $t('pages.mobileWorkshop.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/reviews">
-          <span class="title" :class="{ 'link-active': isCurrentStep(4) }">
+          <span class="title">
             {{ $t('pages.reviews.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/contact">
-          <span class="title" :class="{ 'link-active': isCurrentStep(5) }">
+          <span class="title">
             {{ $t('pages.contact.menuTitle') }}
           </span>
         </nuxt-link>
@@ -65,14 +63,11 @@ export default {
     }
   },
 
-  computed: {
-    step() {
-      return this.$store.state.step
-    },
-  },
   watch: {
     $route() {
-      this.setArrowPosition()
+      this.$nextTick(() => {
+        this.setArrowPosition()
+      })
     },
   },
   mounted() {
@@ -82,15 +77,16 @@ export default {
     }, 0)
   },
   methods: {
-    isCurrentStep(step) {
-      return this.step === step
-    },
     setArrowPosition() {
-      const activeLink = this.$refs.list.querySelector(
-        `:nth-child(${this.step + 1}`,
+      const activeLink = this.$refs.menu.querySelector(
+        '.nuxt-link-active[aria-haspopup=true], .nuxt-link-exact-active',
       )
-      this.arrowPosition = `translateX(${activeLink.offsetLeft}px)`
-      this.arrowWidth = `${activeLink.offsetWidth}px`
+      if (activeLink) {
+        this.arrowPosition = `translateX(${
+          activeLink.parentElement.offsetLeft
+        }px)`
+        this.arrowWidth = `${activeLink.offsetWidth}px`
+      }
     },
   },
 }

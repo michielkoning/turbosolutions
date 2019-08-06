@@ -1,5 +1,5 @@
 <template>
-  <p v-if="submitted">Succes</p>
+  <p v-if="submitted">{{ $t('form.forms.contact.success') }}</p>
 
   <form
     v-else
@@ -10,7 +10,7 @@
     @submit.prevent="submit"
   >
     <input type="hidden" name="form-name" value="contact" />
-    <form-fieldset title="Contactformulier">
+    <form-fieldset :title="$t('form.forms.contact.title')">
       <form-input-text
         v-model.trim.lazy="$v.form.name.$model"
         type="text"
@@ -111,16 +111,15 @@ export default {
     async submit() {
       this.errorMessageForm = ''
       if (this.validate()) {
-        const axiosConfig = {
-          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        }
         await axios.post(
           '/',
           this.encodeFormData({
             'form-name': 'contact',
             ...this.form,
           }),
-          axiosConfig,
+          {
+            header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          },
         )
         this.submitted = true
       }
