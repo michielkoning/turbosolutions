@@ -55,40 +55,38 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       arrowPosition: 0,
       arrowWidth: 0,
-      mounted: false,
+      mounted: false
     }
   },
 
   watch: {
-    $route() {
+    $route () {
       this.$nextTick(() => {
         this.setArrowPosition()
       })
-    },
+    }
   },
-  mounted() {
+  mounted () {
     this.setArrowPosition()
     setTimeout(() => {
       this.mounted = true
     }, 0)
   },
   methods: {
-    setArrowPosition() {
+    setArrowPosition () {
       const activeLink = this.$refs.menu.querySelector(
-        '.nuxt-link-active[aria-haspopup=true], .nuxt-link-exact-active',
+        '.nuxt-link-active[aria-haspopup=true], .nuxt-link-exact-active'
       )
       if (activeLink) {
-        this.arrowPosition = `translateX(${
-          activeLink.parentElement.offsetLeft
-        }px)`
+        this.arrowPosition = `translateX(${activeLink.parentElement.offsetLeft}px)`
         this.arrowWidth = `${activeLink.offsetWidth}px`
       }
-    },
-  },
+    }
+  }
 }
 </script>
 

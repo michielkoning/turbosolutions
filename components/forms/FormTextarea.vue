@@ -19,33 +19,33 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     id: RandomProp,
     value: {
       type: String,
-      required: true,
+      required: true
     },
     errorMessage: {
       type: String,
       required: false,
-      default: '',
-    },
+      default: ''
+    }
   },
-  mounted() {
+  mounted () {
     this.setClassWhenFilled()
   },
   methods: {
-    setClassWhenFilled() {
-      if (this.value) this.$refs.label.classList.add('focus')
+    setClassWhenFilled () {
+      if (this.value) { this.$refs.label.classList.add('focus') }
     },
-    setFocusClass() {
+    setFocusClass () {
       this.$refs.label.classList.add('focus')
     },
-    setBlurClass() {
-      if (!this.value) this.$refs.label.classList.remove('focus')
-    },
-  },
+    setBlurClass () {
+      if (!this.value) { this.$refs.label.classList.remove('focus') }
+    }
+  }
 }
 </script>
 

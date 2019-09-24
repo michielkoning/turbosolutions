@@ -9,12 +9,12 @@ import BlockWhatWeDo from '@/components/blocks/BlockWhatWeDo.vue'
 
 export default {
   components: {
-    BlockWhatWeDo,
+    BlockWhatWeDo
   },
-  head() {
+  head () {
     return {
-      title: this.$t('pages.whatWeDo.title'),
+      title: this.$t('pages.whatWeDo.title')
     }
-  },
+  }
 }
 </script>

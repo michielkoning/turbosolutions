@@ -13,8 +13,7 @@
                 companyName: $t('address.companyName'),
               })
             }}
-            Facebook</span
-          >
+            Facebook</span>
         </a>
       </li>
       <li>
@@ -26,8 +25,7 @@
                 companyName: $t('address.companyName'),
               })
             }}
-            Twitter</span
-          >
+            Twitter</span>
         </a>
       </li>
       <li>
@@ -39,8 +37,7 @@
                 companyName: $t('address.companyName'),
               })
             }}
-            LinkedIn</span
-          >
+            LinkedIn</span>
         </a>
       </li>
     </ul>
@@ -56,8 +53,8 @@ export default {
   components: {
     IconFacebook,
     IconTwitter,
-    IconLinkedin,
-  },
+    IconLinkedin
+  }
 }
 </script>
 

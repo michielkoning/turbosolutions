@@ -49,31 +49,31 @@ export default {
     AppUsps,
     IconLogo,
     IconTriangle,
-    IconHeaderBow,
+    IconHeaderBow
   },
-  data() {
+  data () {
     return {
-      showMenu: false,
+      showMenu: false
     }
   },
 
   methods: {
-    toggleMenu(status) {
+    toggleMenu (status) {
       this.showMenu = status
     },
-    afterEnter() {
+    afterEnter () {
       const bg = this.$refs.bg
       bodyScrollLock.disableBodyScroll(bg)
     },
-    beforeLeave() {
+    beforeLeave () {
       const bg = this.$refs.bg
       bg.scrollTop = 0
     },
-    afterLeave() {
+    afterLeave () {
       const bg = this.$refs.bg
       bodyScrollLock.enableBodyScroll(bg)
-    },
-  },
+    }
+  }
 }
 </script>
 

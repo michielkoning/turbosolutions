@@ -21,8 +21,8 @@ export default {
     AppHeader,
     AppFooter,
     ErrorHandler,
-    BlockFormContact,
-  },
+    BlockFormContact
+  }
 }
 </script>
 

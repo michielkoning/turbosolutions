@@ -1,6 +1,8 @@
 <template>
   <fieldset>
-    <legend class="sr-only">{{ title }}</legend>
+    <legend class="sr-only">
+      {{ title }}
+    </legend>
     <div class="fields">
       <slot />
     </div>
@@ -12,8 +14,8 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>

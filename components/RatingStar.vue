@@ -13,14 +13,14 @@ export default {
   components: {
     IconStarFull,
     IconStarEmpty,
-    IconStarHalf,
+    IconStarHalf
   },
   props: {
     star: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 

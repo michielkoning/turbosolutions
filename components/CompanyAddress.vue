@@ -10,11 +10,9 @@
         <span class="text">
           <icon-building aria-hidden="true" width="20" height="20" />
           <span itemprop="name">{{ $t('address.companyName') }}</span>
-          <br />
-          <span itemprop="streetAddress">{{ $t('address.street') }}</span
-          ><br />
-          <span itemprop="locality">{{ $t('address.city') }}</span
-          >,
+          <br>
+          <span itemprop="streetAddress">{{ $t('address.street') }}</span><br>
+          <span itemprop="locality">{{ $t('address.city') }}</span>,
           <span itemprop="postal-code">{{ $t('address.zipcode') }}</span>
         </span>
       </p>
@@ -27,8 +25,10 @@
         </span>
         <span class="text">
           <icon-phone aria-hidden="true" width="20" height="20" />
-          <a :href="`mailto:${$t('address.email')}`" itemprop="email"
-            >{{ $t('address.email') }}
+          <a
+            :href="`mailto:${$t('address.email')}`"
+            itemprop="email"
+          >{{ $t('address.email') }}
           </a>
         </span>
       </p>
@@ -44,8 +44,8 @@ export default {
   components: {
     IconEnvelope,
     IconPhone,
-    IconBuilding,
-  },
+    IconBuilding
+  }
 }
 </script>
 

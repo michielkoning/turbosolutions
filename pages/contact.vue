@@ -12,12 +12,12 @@ import BlockMap from '@/components/blocks/BlockMap.vue'
 export default {
   components: {
     BlockContact,
-    BlockMap,
+    BlockMap
   },
-  head() {
+  head () {
     return {
-      title: this.$t('pages.contact.title'),
+      title: this.$t('pages.contact.title')
     }
-  },
+  }
 }
 </script>

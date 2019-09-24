@@ -4,12 +4,10 @@
       <div class="text">
         <h1>{{ $t('blocks.mobileWorkshop.title') }}</h1>
         <h2>{{ $t('blocks.mobileWorkshop.intro') }}</h2>
-        <p>
-          {{ $t('blocks.mobileWorkshop.text') }}
-        </p>
+        <p>{{ $t('blocks.mobileWorkshop.text') }}</p>
       </div>
       <div class="image-wrapper">
-        <img src="/media/images/mobile-workshop.jpg" alt="" />
+        <img src="/media/images/mobile-workshop.jpg" alt>
       </div>
     </div>
   </block-wrapper>
@@ -19,8 +17,8 @@
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 export default {
   components: {
-    BlockWrapper,
-  },
+    BlockWrapper
+  }
 }
 </script>
 

@@ -19,8 +19,8 @@ export default {
     BlockWrapper,
     SocialLinks,
     CompanyAddress,
-    SkipLinkTitle,
-  },
+    SkipLinkTitle
+  }
 }
 </script>
 

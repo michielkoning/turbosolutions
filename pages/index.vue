@@ -12,12 +12,12 @@ import BlockMobileWorkshop from '@/components/blocks/BlockMobileWorkshop.vue'
 export default {
   components: {
     BlockGallery,
-    BlockMobileWorkshop,
+    BlockMobileWorkshop
   },
-  head() {
+  head () {
     return {
-      title: this.$t('pages.home.title'),
+      title: this.$t('pages.home.title')
     }
-  },
+  }
 }
 </script>

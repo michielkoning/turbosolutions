@@ -9,12 +9,12 @@ import BlockMobileWorkshop from '@/components/blocks/BlockMobileWorkshop.vue'
 
 export default {
   components: {
-    BlockMobileWorkshop,
+    BlockMobileWorkshop
   },
-  head() {
+  head () {
     return {
-      title: this.$t('pages.mobileWorkshop.title'),
+      title: this.$t('pages.mobileWorkshop.title')
     }
-  },
+  }
 }
 </script>

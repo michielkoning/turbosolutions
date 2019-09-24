@@ -12,9 +12,9 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, viewport-fit=cover',
+        content: 'width=device-width, initial-scale=1, viewport-fit=cover'
       },
-      { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -22,9 +22,9 @@ export default {
       {
         href:
           'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap',
-        rel: 'stylesheet',
-      },
-    ],
+        rel: 'stylesheet'
+      }
+    ]
   },
 
   /*
@@ -37,7 +37,7 @@ export default {
    */
   css: ['~/styles/base.css'],
   router: {
-    middleware: ['i18n'],
+    middleware: ['i18n']
   },
   /*
    ** Plugins to load before mounting the App
@@ -46,7 +46,7 @@ export default {
     '~/plugins/i18n.js',
     '~/plugins/axios',
     '~/plugins/vuelidate',
-    '~/plugins/google-maps',
+    '~/plugins/google-maps'
   ],
 
   /*
@@ -58,14 +58,17 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
     '@nuxtjs/axios',
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Axios module configuration
    */
   axios: {
-    baseURL: baseUrl,
+    baseURL: baseUrl
   },
-
+  googleAnalytics: {
+    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY
+  },
   /*
    ** Build configuration
    */
@@ -73,14 +76,14 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/,
+          exclude: /(node_modules)/
         })
       }
     },
@@ -89,7 +92,7 @@ export default {
     postcss: {
       plugins: {
         'postcss-mixins': {
-          mixinsDir: './styles/mixins/',
+          mixinsDir: './styles/mixins/'
         },
         'postcss-preset-env': {
           importFrom: ['./styles/media-queries/media-queries.css'],
@@ -97,13 +100,13 @@ export default {
           features: {
             'nesting-rules': true,
             'custom-media-queries': true,
-            'media-query-ranges': true,
-          },
-        },
-      },
-    },
+            'media-query-ranges': true
+          }
+        }
+      }
+    }
   },
   sitemap: {
-    hostname: baseUrl,
-  },
+    hostname: baseUrl
+  }
 }

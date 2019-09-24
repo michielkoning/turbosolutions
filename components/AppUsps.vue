@@ -24,8 +24,8 @@ export default {
   components: {
     IconService,
     IconSpareParts,
-    IconStarEmpty,
-  },
+    IconStarEmpty
+  }
 }
 </script>
 

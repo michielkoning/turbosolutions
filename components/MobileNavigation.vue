@@ -33,26 +33,26 @@ export default {
   components: {
     IconBars,
     NotchWrapper,
-    IconLogoWhite,
+    IconLogoWhite
   },
-  data() {
+  data () {
     return {
-      menuIsExpanded: false,
+      menuIsExpanded: false
     }
   },
 
   watch: {
-    $route() {
+    $route () {
       this.toggleMenu(false)
-    },
+    }
   },
 
   methods: {
-    toggleMenu(status) {
+    toggleMenu (status) {
       this.menuIsExpanded = status
       this.$emit('toggleMenu', status)
-    },
-  },
+    }
+  }
 }
 </script>
 

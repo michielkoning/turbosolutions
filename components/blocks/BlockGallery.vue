@@ -2,9 +2,9 @@
   <block-wrapper>
     <div class="gallery">
       <skip-link-title class="title" :title="$t('pages.home.title')" />
-      <img src="/media/images/image-1.jpg" class="image-1" alt="" />
-      <img src="/media/images/image-2.jpg" class="image-2" alt="" />
-      <img src="/media/images/image-3.jpg" class="image-3" alt="" />
+      <img src="/media/images/image-1.jpg" class="image-1" alt="">
+      <img src="/media/images/image-2.jpg" class="image-2" alt="">
+      <img src="/media/images/image-3.jpg" class="image-3" alt="">
     </div>
   </block-wrapper>
 </template>
@@ -15,8 +15,8 @@ import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 export default {
   components: {
     SkipLinkTitle,
-    BlockWrapper,
-  },
+    BlockWrapper
+  }
 }
 </script>
 

@@ -1,5 +1,7 @@
 <template>
-  <p v-if="submitted">{{ $t('form.forms.contact.success') }}</p>
+  <p v-if="submitted">
+    {{ $t('form.forms.contact.success') }}
+  </p>
 
   <form
     v-else
@@ -9,7 +11,7 @@
     name="contact"
     @submit.prevent="submit"
   >
-    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="form-name" value="contact">
     <form-fieldset :title="$t('form.forms.contact.title')">
       <form-input-text
         v-model.trim.lazy="$v.form.name.$model"
@@ -32,98 +34,99 @@
         type="message"
         :title="$t('form.fields.message')"
       />
-      <button type="submit" class="btn">{{ $t('form.buttons.send') }}</button>
+      <button type="submit" class="btn">
+        {{ $t('form.buttons.send') }}
+      </button>
     </form-fieldset>
   </form>
 </template>
 
 <script>
+import { required, email } from 'vuelidate/lib/validators'
+import axios from 'axios'
 import FormFieldset from '@/components/forms/FormFieldset.vue'
 import FormInputText from '@/components/forms/FormInputText.vue'
 import FormTextarea from '@/components/forms/FormTextarea.vue'
-import { required, email } from 'vuelidate/lib/validators'
-import axios from 'axios'
 
 export default {
   components: {
     FormFieldset,
     FormInputText,
-    FormTextarea,
+    FormTextarea
   },
-  data() {
+  data () {
     return {
       submitted: false,
       form: {
         name: '',
         email: '',
-        message: '',
-      },
+        message: ''
+      }
     }
   },
   validations: {
     form: {
       name: {
-        required,
+        required
       },
       email: {
         required,
-        email,
-      },
-    },
+        email
+      }
+    }
   },
   computed: {
-    errorMessageName() {
+    errorMessageName () {
       if (this.$v.form.name.$anyError) {
         if (!this.$v.form.name.required) {
           return this.$t('form.errors.general.required', {
-            field: this.$t('form.fields.name').toLowerCase(),
+            field: this.$t('form.fields.name').toLowerCase()
           })
         }
       }
       return null
     },
-    errorMessageEmail() {
+    errorMessageEmail () {
       if (this.$v.form.email.$anyError) {
         if (!this.$v.form.email.required) {
           return this.$t('form.errors.general.required', {
-            field: this.$t('form.fields.email').toLowerCase(),
+            field: this.$t('form.fields.email').toLowerCase()
           })
         }
 
-        if (!this.$v.form.email.email)
-          return this.$t('form.errors.fields.email.invalidEmail')
+        if (!this.$v.form.email.email) { return this.$t('form.errors.fields.email.invalidEmail') }
       }
       return null
-    },
+    }
   },
   methods: {
-    encodeFormData(data) {
+    encodeFormData (data) {
       return Object.keys(data)
         .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
         )
         .join('&')
     },
-    validate() {
+    validate () {
       this.$v.$touch()
       return !this.$v.$invalid
     },
-    async submit() {
+    async submit () {
       this.errorMessageForm = ''
       if (this.validate()) {
         await axios.post(
           '/',
           this.encodeFormData({
             'form-name': 'contact',
-            ...this.form,
+            ...this.form
           }),
           {
-            header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          },
+            header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+          }
         )
         this.submitted = true
       }
-    },
-  },
+    }
+  }
 }
 </script>

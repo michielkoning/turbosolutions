@@ -10,16 +10,16 @@ import RatingStar from '@/components/RatingStar.vue'
 
 export default {
   components: {
-    RatingStar,
+    RatingStar
   },
   props: {
     rating: {
       type: Number,
-      required: true,
-    },
+      required: true
+    }
   },
   computed: {
-    stars() {
+    stars () {
       const stars = []
       for (let i = 1; i <= 5; i++) {
         if (i < this.rating + 1 && i > this.rating) {
@@ -31,7 +31,7 @@ export default {
         }
       }
       return stars
-    },
-  },
+    }
+  }
 }
 </script>

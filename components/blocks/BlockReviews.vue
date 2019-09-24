@@ -2,10 +2,14 @@
   <block-wrapper>
     <h1>{{ $t('pages.reviews.title') }}</h1>
     <h2>Read what people are saying about our company and service.</h2>
-    <p class="intro">{{ $t('pages.reviews.intro') }}</p>
+    <p class="intro">
+      {{ $t('pages.reviews.intro') }}
+    </p>
     <p>
       {{ $t('pages.reviews.text.part1') }}
-      <nuxt-link to="contact">{{ $t('pages.reviews.text.part2') }}</nuxt-link>
+      <nuxt-link to="contact">
+        {{ $t('pages.reviews.text.part2') }}
+      </nuxt-link>
       {{ $t('pages.reviews.text.part3') }}
     </p>
     <ul>
@@ -23,9 +27,9 @@ import AppReview from '@/components/AppReview.vue'
 export default {
   components: {
     BlockWrapper,
-    AppReview,
+    AppReview
   },
-  data() {
+  data () {
     return {
       reviews: [
         {
@@ -33,25 +37,25 @@ export default {
           cite: 'Benelux Powerplants',
           title: 'Outstanding service and speed',
           text:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.'
         },
         {
           rating: 3.5,
           cite: 'TurboCharger Madrid',
           title: 'Always spare parts available',
           text:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.'
         },
         {
           cite: 'Nuon',
           rating: 4,
           title: '24/7 service is what we needed and what we got',
           text:
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-        },
-      ],
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.'
+        }
+      ]
     }
-  },
+  }
 }
 </script>
 

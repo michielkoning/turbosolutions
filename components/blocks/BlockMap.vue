@@ -1,7 +1,7 @@
 <template>
   <notch-wrapper>
     <GmapMap :center="position" :zoom="12" class="map">
-      <GmapMarker :position="position"></GmapMarker>
+      <GmapMarker :position="position" />
     </GmapMap>
   </notch-wrapper>
 </template>
@@ -11,16 +11,16 @@ import NotchWrapper from '@/components/NotchWrapper.vue'
 
 export default {
   components: {
-    NotchWrapper,
+    NotchWrapper
   },
-  data() {
+  data () {
     return {
       position: {
         lat: 52.370216,
-        lng: 4.895168,
-      },
+        lng: 4.895168
+      }
     }
-  },
+  }
 }
 </script>
 

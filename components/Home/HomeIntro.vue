@@ -8,8 +8,8 @@
 import HomeMobileWorkshop from '@/components/Home/HomeMobileWorkshop.vue'
 export default {
   components: {
-    HomeMobileWorkshop,
-  },
+    HomeMobileWorkshop
+  }
 }
 </script>
 

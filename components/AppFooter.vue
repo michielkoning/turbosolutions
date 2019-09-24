@@ -6,26 +6,28 @@
           <h2>{{ $t('blocks.links.title') }}</h2>
           <ul>
             <li>
-              <nuxt-link to="/">{{ $t('pages.home.menuTitle') }} </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/get-to-know-us"
-                >{{ $t('pages.getToKnowUs.menuTitle') }}
+              <nuxt-link to="/">
+                {{ $t('pages.home.menuTitle') }}
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/what-we-do"
-                >{{ $t('pages.whatWeDo.menuTitle') }}
+              <nuxt-link to="/get-to-know-us">
+                {{ $t('pages.getToKnowUs.menuTitle') }}
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/get-to-know-us"
-                >{{ $t('pages.mobileWorkshop.menuTitle') }}
+              <nuxt-link to="/what-we-do">
+                {{ $t('pages.whatWeDo.menuTitle') }}
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/mobile-workshop"
-                >{{ $t('pages.contact.menuTitle') }}
+              <nuxt-link to="/get-to-know-us">
+                {{ $t('pages.mobileWorkshop.menuTitle') }}
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/mobile-workshop">
+                {{ $t('pages.contact.menuTitle') }}
               </nuxt-link>
             </li>
           </ul>
@@ -46,8 +48,8 @@ export default {
   components: {
     NotchWrapper,
     SocialLinks,
-    CompanyAddress,
-  },
+    CompanyAddress
+  }
 }
 </script>
 

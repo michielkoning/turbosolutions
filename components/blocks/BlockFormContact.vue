@@ -11,8 +11,7 @@
           {{ $t('blocks.contact.text.part2') }}
           <a :href="`mailto:${$t('address.email')}`">{{
             $t('address.email')
-          }}</a
-          >{{ $t('blocks.contact.text.part3') }}
+          }}</a>{{ $t('blocks.contact.text.part3') }}
         </p>
       </div>
       <form-contact class="form" />
@@ -27,8 +26,8 @@ import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 export default {
   components: {
     FormContact,
-    BlockWrapper,
-  },
+    BlockWrapper
+  }
 }
 </script>
 

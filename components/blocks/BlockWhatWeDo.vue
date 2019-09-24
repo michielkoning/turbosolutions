@@ -6,10 +6,12 @@
       {{ text }}
     </p>
     <ul>
-      <li v-for="text in $t('pages.whatWeDo.list')" :key="text">{{ text }}</li>
+      <li v-for="text in $t('pages.whatWeDo.list')" :key="text">
+        {{ text }}
+      </li>
     </ul>
     <div class="image-wrapper">
-      <img src="/media/images/get-to-know-us.jpg" alt="" />
+      <img src="/media/images/get-to-know-us.jpg" alt="">
     </div>
   </block-wrapper>
 </template>
@@ -21,8 +23,8 @@ import SkipLinkTitle from '@/components/SkipLinkTitle.vue'
 export default {
   components: {
     BlockWrapper,
-    SkipLinkTitle,
-  },
+    SkipLinkTitle
+  }
 }
 </script>
 

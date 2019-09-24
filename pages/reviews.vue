@@ -9,12 +9,12 @@ import BlockReviews from '@/components/blocks/BlockReviews.vue'
 
 export default {
   components: {
-    BlockReviews,
+    BlockReviews
   },
-  head() {
+  head () {
     return {
-      title: this.$t('pages.reviews.title'),
+      title: this.$t('pages.reviews.title')
     }
-  },
+  }
 }
 </script>

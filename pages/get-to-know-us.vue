@@ -9,12 +9,12 @@ import BlockGetToKnowUs from '@/components/blocks/BlockGetToKnowUs.vue'
 
 export default {
   components: {
-    BlockGetToKnowUs,
+    BlockGetToKnowUs
   },
-  head() {
+  head () {
     return {
-      title: this.$t('pages.getToKnowUs.title'),
+      title: this.$t('pages.getToKnowUs.title')
     }
-  },
+  }
 }
 </script>

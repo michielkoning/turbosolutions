@@ -15,14 +15,14 @@ import RatingStars from '@/components/RatingStars.vue'
 
 export default {
   components: {
-    RatingStars,
+    RatingStars
   },
   props: {
     review: {
       type: Object,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 
