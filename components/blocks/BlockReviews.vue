@@ -7,7 +7,7 @@
     </p>
     <p>
       {{ $t('pages.reviews.text.part1') }}
-      <nuxt-link to="contact">
+      <nuxt-link to="contact/">
         {{ $t('pages.reviews.text.part2') }}
       </nuxt-link>
       {{ $t('pages.reviews.text.part3') }}

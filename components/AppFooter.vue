@@ -11,22 +11,22 @@
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/get-to-know-us">
+              <nuxt-link to="/get-to-know-us/">
                 {{ $t('pages.getToKnowUs.menuTitle') }}
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/what-we-do">
+              <nuxt-link to="/what-we-do/">
                 {{ $t('pages.whatWeDo.menuTitle') }}
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/get-to-know-us">
+              <nuxt-link to="/get-to-know-us/">
                 {{ $t('pages.mobileWorkshop.menuTitle') }}
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/mobile-workshop">
+              <nuxt-link to="/mobile-workshop/">
                 {{ $t('pages.contact.menuTitle') }}
               </nuxt-link>
             </li>

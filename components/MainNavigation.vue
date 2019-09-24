@@ -10,35 +10,35 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/get-to-know-us">
+        <nuxt-link to="/get-to-know-us/">
           <span class="title">
             {{ $t('pages.getToKnowUs.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/what-we-do">
+        <nuxt-link to="/what-we-do/">
           <span class="title">
             {{ $t('pages.whatWeDo.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/mobile-workshop">
+        <nuxt-link to="/mobile-workshop/">
           <span class="title">
             {{ $t('pages.mobileWorkshop.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/reviews">
+        <nuxt-link to="/reviews/">
           <span class="title">
             {{ $t('pages.reviews.menuTitle') }}
           </span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/contact">
+        <nuxt-link to="/contact/">
           <span class="title">
             {{ $t('pages.contact.menuTitle') }}
           </span>
