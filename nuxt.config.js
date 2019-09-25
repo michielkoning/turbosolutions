@@ -1,5 +1,5 @@
 import pkg from './package'
-const baseUrl = 'https://turbosolutions.michielkoning.nl/'
+const baseUrl = 'https://turbosolutionseurope.com/'
 
 export default {
   mode: 'universal',
