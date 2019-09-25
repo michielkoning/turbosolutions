@@ -67,7 +67,8 @@ export default {
     baseURL: baseUrl
   },
   googleAnalytics: {
-    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY
+    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY,
+    set: [{ field: 'anonymizeIp', value: true }]
   },
   /*
    ** Build configuration
@@ -76,7 +77,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend (config, ctx) {
+    extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
