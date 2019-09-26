@@ -14,6 +14,10 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, viewport-fit=cover'
       },
+      {
+        meta: 'google-site-verification',
+        content: 'xxksTKQXa1vH4yXZxc3khpldGfnbQ8CL8yRNhYLWW50'
+      },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
@@ -85,7 +89,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
