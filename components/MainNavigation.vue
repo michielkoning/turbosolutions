@@ -31,9 +31,9 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/reviews/">
+        <nuxt-link to="/recommendations/">
           <span class="title">
-            {{ $t('pages.reviews.menuTitle') }}
+            {{ $t('pages.recommendations.menuTitle') }}
           </span>
         </nuxt-link>
       </li>

@@ -1,19 +1,19 @@
 <template>
   <block-wrapper>
-    <h1>{{ $t('pages.reviews.title') }}</h1>
+    <h1>{{ $t('pages.recommendations.title') }}</h1>
     <h2>Read what people are saying about our company and service.</h2>
     <p class="intro">
-      {{ $t('pages.reviews.intro') }}
+      {{ $t('pages.recommendations.intro') }}
     </p>
     <p>
-      {{ $t('pages.reviews.text.part1') }}
+      {{ $t('pages.recommendations.text.part1') }}
       <nuxt-link to="contact/">
-        {{ $t('pages.reviews.text.part2') }}
+        {{ $t('pages.recommendations.text.part2') }}
       </nuxt-link>
-      {{ $t('pages.reviews.text.part3') }}
+      {{ $t('pages.recommendations.text.part3') }}
     </p>
     <ul>
-      <li v-for="review in reviews" :key="review.title">
+      <li v-for="review in recommendations" :key="review.title">
         <app-review :review="review" />
       </li>
     </ul>
@@ -31,7 +31,7 @@ export default {
   },
   data () {
     return {
-      reviews: [
+      recommendations: [
         {
           rating: 5,
           cite: 'Benelux Powerplants',

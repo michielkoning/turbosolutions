@@ -34,9 +34,9 @@
       "title": "Mobile workshop",
       "menuTitle": "Mobile workshop"
     },
-    "reviews": {
-      "title": "Reviews",
-      "menuTitle": "Reviews",
+    "recommendations": {
+      "title": "Recommendations",
+      "menuTitle": "Recommendations",
       "intro": "Read what people are saying about our company and service.",
       "text": {
         "part1": "If you want to share your honest opinion about our company and service, please feel free to contact us by sending your review. You can also use the contactform at the ",
@@ -49,7 +49,6 @@
       "menuTitle": "Contact"
     }
   },
-
   "blocks": {
     "contact": {
       "title": "Make an appointment today",
@@ -74,12 +73,13 @@
   },
   "address": {
     "title": "Adres",
-    "companyName": "Turbo solutions",
-    "street": "Street",
-    "city": "City",
-    "zipcode": "Zipcode",
+    "companyName": "Turbo Solutions Europe SL",
+    "street": "Carrer Mas del Vidalet 17",
+    "city": "Cambrils",
+    "zipcode": "43850",
+    "country": "España",
     "phoneNumber": "+34 674 14 71 73",
-    "email": "dexter@turbosolutionseurope.com"
+    "email": "info@turbosolutionseurope.com"
   },
   "header": {
     "mainNavigation": "Main navigation",
@@ -93,7 +93,6 @@
   "errorHandler": {
     "close": "Close message"
   },
-
   "form": {
     "fields": {
       "name": "Name",

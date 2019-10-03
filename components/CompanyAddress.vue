@@ -12,8 +12,9 @@
           <span itemprop="name">{{ $t('address.companyName') }}</span>
           <br>
           <span itemprop="streetAddress">{{ $t('address.street') }}</span><br>
+          <span itemprop="postal-code">{{ $t('address.zipcode') }}</span>,
           <span itemprop="locality">{{ $t('address.city') }}</span>,
-          <span itemprop="postal-code">{{ $t('address.zipcode') }}</span>
+          <span itemprop="country">{{ $t('address.country') }}</span>
         </span>
       </p>
       <p>

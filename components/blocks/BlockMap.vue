@@ -16,8 +16,8 @@ export default {
   data () {
     return {
       position: {
-        lat: 52.370216,
-        lng: 4.895168
+        lat: 41.07308,
+        lng: 1.08898
       }
     }
   }
