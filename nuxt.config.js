@@ -61,7 +61,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
     '@nuxtjs/google-analytics'
   ],
   /*
