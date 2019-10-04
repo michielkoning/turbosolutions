@@ -17,6 +17,10 @@ body {
 p {
   hanging-punctuation: first;
   margin: 0 0 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 h1,

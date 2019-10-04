@@ -1,12 +1,9 @@
 <template>
   <blockquote>
     <rating-stars :rating="review.rating" />
-    <div class="header">
-      <h3>{{ review.title }}</h3>
-      -
-      <cite>{{ review.cite }}</cite>
-    </div>
-    <p>{{ review.text }}</p>
+    <cite>{{ review.cite }}</cite>
+    <!-- eslint-disable-next-line -->
+    <div v-html="review.text" />
   </blockquote>
 </template>
 
@@ -46,9 +43,6 @@ blockquote {
 cite {
   margin: 0.5em 0 0;
   font-size: 1.25rem;
-}
-
-p {
-  margin: 0;
+  font-weight: var(--font-weight-bold);
 }
 </style>
