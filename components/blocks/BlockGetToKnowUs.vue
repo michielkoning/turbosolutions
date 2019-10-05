@@ -5,7 +5,7 @@
 
     <p>{{ $t('pages.getToKnowUs.text.top') }}</p>
     <div class="image-wrapper">
-      <app-image src="/media/images/get-to-know-us.jpg" width="770" height="425" />
+      <app-image src="/media/images/get-to-know-us.jpg?nf_resize=fit&w=770&h=425" width="770" height="425" />
     </div>
     <p>{{ $t('pages.getToKnowUs.text.bottom') }}</p>
   </block-wrapper>
