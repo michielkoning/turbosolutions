@@ -7,7 +7,7 @@
         <p>{{ $t('blocks.mobileWorkshop.text') }}</p>
       </div>
       <div class="image-wrapper">
-        <img src="/media/images/mobile-workshop.png" alt>
+        <app-image src="/media/images/mobile-workshop.png" />
       </div>
     </div>
   </block-wrapper>
@@ -15,9 +15,12 @@
 
 <script>
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
+import AppImage from '@/components/AppImage.vue'
+
 export default {
   components: {
-    BlockWrapper
+    BlockWrapper,
+    AppImage
   }
 }
 </script>

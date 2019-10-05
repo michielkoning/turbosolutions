@@ -5,7 +5,7 @@
 
     <p>{{ $t('pages.getToKnowUs.text.top') }}</p>
     <div class="image-wrapper">
-      <img src="/media/images/get-to-know-us.jpg" alt="">
+      <app-image src="/media/images/get-to-know-us.jpg" />
     </div>
     <p>{{ $t('pages.getToKnowUs.text.bottom') }}</p>
   </block-wrapper>
@@ -14,11 +14,13 @@
 <script>
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 import SkipLinkTitle from '@/components/SkipLinkTitle.vue'
+import AppImage from '@/components/AppImage.vue'
 
 export default {
   components: {
     BlockWrapper,
-    SkipLinkTitle
+    SkipLinkTitle,
+    AppImage
   }
 }
 </script>
