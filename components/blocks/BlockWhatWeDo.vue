@@ -11,7 +11,7 @@
       </li>
     </ul>
     <div class="image-wrapper">
-      <app-image src="/media/images/get-to-know-us.jpg" />
+      <app-image src="/media/images/get-to-know-us.jpg" width="770" height="425" />
     </div>
   </block-wrapper>
 </template>

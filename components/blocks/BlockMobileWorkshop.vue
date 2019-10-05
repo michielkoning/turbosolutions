@@ -7,7 +7,7 @@
         <p>{{ $t('blocks.mobileWorkshop.text') }}</p>
       </div>
       <div class="image-wrapper">
-        <app-image src="/media/images/mobile-workshop.png" />
+        <app-image src="/media/images/mobile-workshop.png" width="600" height="470" />
       </div>
     </div>
   </block-wrapper>

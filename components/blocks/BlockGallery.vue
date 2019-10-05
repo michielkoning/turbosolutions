@@ -2,9 +2,9 @@
   <block-wrapper>
     <div class="gallery">
       <skip-link-title class="title" :title="$t('pages.home.title')" />
-      <app-image src="/media/images/image-1.jpg" class="image-1" />
-      <app-image src="/media/images/image-2.jpg" class="image-2" />
-      <app-image src="/media/images/image-3.jpg" class="image-3" />
+      <app-image src="/media/images/image-1.jpg" class="image-1" width="518" height="316" />
+      <app-image src="/media/images/image-2.jpg" class="image-2" width="391" height="537" />
+      <app-image src="/media/images/image-3.jpg" class="image-3" width="391" height="537" />
     </div>
   </block-wrapper>
 </template>
