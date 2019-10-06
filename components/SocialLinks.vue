@@ -5,31 +5,7 @@
     </h2>
     <ul class="social-links">
       <li>
-        <a href="#" rel="noopener" target="_blank">
-          <icon-facebook aria-hidden="true" width="32" height="32" />
-          <span class="sr-only">
-            {{
-              $t('blocks.socialMedia.viewUsOn', {
-                companyName: $t('address.companyName'),
-              })
-            }}
-            Facebook</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" rel="noopener" target="_blank">
-          <icon-twitter aria-hidden="true" width="32" height="32" />
-          <span class="sr-only">
-            {{
-              $t('blocks.socialMedia.viewUsOn', {
-                companyName: $t('address.companyName'),
-              })
-            }}
-            Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" rel="noopener" target="_blank">
+        <a href="https://www.linkedin.com/in/bastiaan-van-duinen-19706557" rel="noopener" target="_blank">
           <icon-linkedin aria-hidden="true" width="32" height="32" />
           <span class="sr-only">
             {{
@@ -45,14 +21,10 @@
 </template>
 
 <script>
-import IconFacebook from '@/assets/icons/facebook.svg'
-import IconTwitter from '@/assets/icons/twitter.svg'
 import IconLinkedin from '@/assets/icons/linkedin.svg'
 
 export default {
   components: {
-    IconFacebook,
-    IconTwitter,
     IconLinkedin
   }
 }
