@@ -5,13 +5,9 @@
       <div class="text">
         <p>
           {{ $t('blocks.contact.text.part1') }}
-          <a :href="`tel:${$t('address.phoneNumber')}`">{{
-            $t('address.phoneNumber')
-          }}</a>
-          {{ $t('blocks.contact.text.part2') }}
           <a :href="`mailto:${$t('address.email')}`">{{
             $t('address.email')
-          }}</a>{{ $t('blocks.contact.text.part3') }}
+          }}</a>{{ $t('blocks.contact.text.part2') }}
         </p>
       </div>
       <form-contact class="form" />

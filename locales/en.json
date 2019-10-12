@@ -9,8 +9,8 @@
       "menuTitle": "Get to know us",
       "intro": "An international supplier of service for your turbocharger",
       "text": {
-        "top": "Turbo Solutions Europe is your ideal partner when it comes to high-quality maintenance in a durable way. We started years ago in Spain, just near the coastal area of Barcelona in front of the sea and in between powerplants.",
-        "bottom": "We grow constantly and have sales offices in Spain, Panama, Dominican Republic and, on every strategic location in Europe, Latin America and the Caribbean. Close cooperation with local agents around the world helps us serve our customers independent of their location."
+        "top": "Turbo Solutions Europe is your ideal partner when it comes to high-quality maintenance in a durable way.",
+        "bottom": "We grow constantly and have sales offices in Spain, Panama, Dominican Republic which means on every strategic location in Europe, Latin America and the Caribbean. Close cooperation with local agents around the world helps us serve our customers independent of their location."
       }
     },
     "whatWeDo": {
@@ -51,11 +51,10 @@
   },
   "blocks": {
     "contact": {
-      "title": "Make an appointment today",
+      "title": "Submit your inquiry and we will contact you as soon as possible",
       "text": {
-        "part1": "Call us: ",
-        "part2": " or send an e-mail: ",
-        "part3": "."
+        "part1": " Send an e-mail: ",
+        "part2": "."
       }
     },
     "mobileWorkshop": {
