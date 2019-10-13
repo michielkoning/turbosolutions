@@ -19,7 +19,7 @@
       </p>
       <p>
         <span class="text">
-          <icon-phone aria-hidden="true" width="20" height="20" />
+          <icon-envelope aria-hidden="true" width="20" height="20" />
           <a
             :href="`mailto:${$t('address.email')}`"
             itemprop="email"
@@ -31,14 +31,14 @@
   </div>
 </template>
 <script>
-import IconPhone from '@/assets/icons/phone.svg'
+import IconEnvelope from '@/assets/icons/envelope.svg'
 import IconBuilding from '@/assets/icons/building.svg'
 
 export default {
   components: {
-    IconPhone,
-    IconBuilding
-  }
+    IconEnvelope,
+    IconBuilding,
+  },
 }
 </script>
 
