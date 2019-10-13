@@ -9,13 +9,14 @@
       "menuTitle": "Get to know us",
       "intro": "An international supplier of service for your turbocharger",
       "text": {
-        "top":
-        [
+        "top": [
           "Turbo Solutions Europe is your ideal partner when it comes to high-quality maintenance in a durable way. We cover any turbo installation where industrial turbos need to run efficiently and reliably.",
           "Our experience includes major shipping and fleet operators, cruise ships, naval clients, off-shore platforms, power generation plants and locomotives.",
           "We will always be able to diagnose and repair your turbo issues, most of the time we will also show you exactly how we have performed that job before. This will give you the confidence to rely on us for all your turbo needs."
         ],
-        "bottom": "We grow constantly and have sales offices in Spain, Panama, Dominican Republic which means on every strategic location in Europe, Latin America and the Caribbean. Close cooperation with local agents around the world helps us serve our customers independent of their location."
+        "bottom": [
+          "We grow constantly and have sales offices in Spain, Panama, Dominican Republic which means on every strategic location in Europe, Latin America and the Caribbean. Close cooperation with local agents around the world helps us serve our customers independent of their location."
+        ]
       }
     },
     "whatWeDo": {
@@ -28,17 +29,46 @@
           "Some of the services Turbo Solutions Europe can offer your company are:"
         ],
         "list": [
-          "Monitoring",
-          "Cleaning",
-          "Grinding & Machining",
-          "Fuel System Maintenance",
-          "Power Packs",
-          "Accessories & Consumables"
+          {
+            "title": "Complete overhaul"
+          },
+          {
+            "title": "Balancing",
+            "text": "Our balancing machines are capable of handling rotors from I kg. up to 2.000 kg. and are calibrated on a yearly bases with certification."
+          },
+          {
+            "title": "Blade repair"
+          },
+          {
+            "title": "Reconditioning"
+          },
+          {
+            "title": "Spare parts",
+            "text": "We offer a wide range of turbo charger spares and are able to deliver new, recon and parts on exchange base on short notice and all with the same 12 months warranty. Although TSE is not an authorized reseller of ABB® parts, we often source original TPS® and TPL® parts from other resellers."
+          },
+          {
+            "title": "Engineers",
+            "text": "TSE engineers selected for an assignment must be qualified for that specific brand, model and series of turbocharger. TSE has a master list comparing engineer capabilities with each turbocharger brand, model and series. Prior to scheduling an engineer, the master list is consulted to ensure that we are providing a qualified engineer."
+          }
         ]
       },
-      "bottom": [
-        "Turbo Solution Europe services all types of modern, high-efficiency exhaust gas turbochargers in both single-stage radial and axial turbines designs. We are comfortable with engines ranging from 400 kW to 30,000 kW per turbocharger and have used engines using heavy fuel oil, diesel, gas or renewable fuels such as Jatropha oil, animal fat or recycled vegetable oils. In all cases we will help you make them run smoother, more efficiently and more reliably."
-      ]
+      "bottom": {
+        "part1": [
+          "Turbo Solution Europe services all types of modern, high-efficiency exhaust gas turbochargers in both single-stage radial and axial turbines designs. We are comfortable with engines ranging from 400 kW to 30,000 kW per turbocharger and have used engines using heavy fuel oil, diesel, gas or renewable fuels such as Jatropha oil, animal fat or recycled vegetable oils. In all cases we will help you make them run smoother, more efficiently and more reliably."
+        ],
+        "part2": {
+          "title": "Diesel and Gas Powered Engine Types",
+          "text": [
+            "Turbocharger units for diesel and gas-powered large-bore engines, two and four-stroke engines, main, auxiliary and back-up engines are all covered in our certification process."
+          ]
+        },
+        "part3": {
+          "title": "Stationary, Land-Based and Floating Power Plants",
+          "text": [
+            "Our heritage is on the sea, so we are used to the Floating Power Plants running on portable barges. We also have worked for many years on land based power generators. And when we work on yours you can be assured that we will bring with us the time-tested skills and quality control that has made us the longest serving, independent turbocharger workshop to have held both ISO9001 and Lloyds accreditation."
+          ]
+        }
+      }
     },
     "mobileWorkshop": {
       "title": "Mobile workshop",

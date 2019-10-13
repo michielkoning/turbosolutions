@@ -1,16 +1,16 @@
 <template>
-  <block-wrapper class="block-form-contact">
+  <block-wrapper :class="$style['block-form-contact']">
     <h1>{{ $t('blocks.contact.title') }}</h1>
-    <div class="wrapper">
-      <div class="text">
+    <div :class="$style.wrapper">
+      <div :class="$style.text">
         <p>
           {{ $t('blocks.contact.text.part1') }}
-          <a :href="`mailto:${$t('address.email')}`">{{
+          <a :href="`mailto:${$t('address.email')}`" :class="$style.link">{{
             $t('address.email')
           }}</a>{{ $t('blocks.contact.text.part2') }}
         </p>
       </div>
-      <form-contact class="form" />
+      <form-contact :class="$style.form" />
     </div>
   </block-wrapper>
 </template>
@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss" module>
 .block-form-contact {
   color: var(--color-primary);
   background: #9ad3ec;
@@ -50,7 +50,7 @@ export default {
   grid-area: form;
 }
 
-a {
+.link {
   word-wrap: break-word;
 }
 </style>

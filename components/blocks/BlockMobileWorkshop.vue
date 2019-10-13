@@ -1,12 +1,12 @@
 <template>
   <block-wrapper>
-    <div class="wrapper">
-      <div class="text">
+    <div :class="$style.wrapper">
+      <div>
         <h1>{{ $t('blocks.mobileWorkshop.title') }}</h1>
         <h2>{{ $t('blocks.mobileWorkshop.intro') }}</h2>
         <p>{{ $t('blocks.mobileWorkshop.text') }}</p>
       </div>
-      <div class="image-wrapper">
+      <div>
         <app-image src="/media/images/tse_welding.jpg?nf_resize=fit&w=600&h=470" width="600" height="470" />
       </div>
     </div>
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss" module>
 .wrapper {
   display: grid;
   grid-gap: var(--gutter);

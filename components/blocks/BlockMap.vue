@@ -1,6 +1,6 @@
 <template>
   <notch-wrapper>
-    <GmapMap :center="position" :zoom="12" class="map">
+    <GmapMap :center="position" :zoom="12" :class="$style.map">
       <GmapMarker :position="position" />
     </GmapMap>
   </notch-wrapper>
@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss" module>
 .map {
   width: 100%;
   height: 20em;

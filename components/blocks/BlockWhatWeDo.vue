@@ -2,20 +2,24 @@
   <block-wrapper>
     <skip-link-title class="title" :title="$t('pages.whatWeDo.title')" />
     <h2>{{ $t('pages.whatWeDo.intro') }}</h2>
-    <p v-for="text in $t('pages.whatWeDo.top.text')" :key="text">
-      {{ text }}
-    </p>
+    <app-text :text="$t('pages.whatWeDo.top.text')" />
+
     <ul>
-      <li v-for="text in $t('pages.whatWeDo.top.list')" :key="text">
-        {{ text }}
+      <li v-for="item in $t('pages.whatWeDo.top.list')" :key="item.title">
+        <h3>{{ item.title }}</h3>
+        <p v-if="item.text">
+          {{ item.text }}
+        </p>
       </li>
     </ul>
     <div :class="$style['image-wrapper']">
       <app-image :class="$style['image']" src="/media/images/tse_mechanics.jpg?nf_resize=fit&w=770&h=425" width="770" height="425" />
     </div>
-    <p v-for="text in $t('pages.whatWeDo.bottom')" :key="text">
-      {{ text }}
-    </p>
+    <app-text :text="$t('pages.whatWeDo.bottom.part1')" />
+    <h2>{{ $t('pages.whatWeDo.bottom.part2.title') }}</h2>
+    <app-text :text="$t('pages.whatWeDo.bottom.part2.text')" />
+    <h3>{{ $t('pages.whatWeDo.bottom.part3.title') }}</h3>
+    <app-text :text="$t('pages.whatWeDo.bottom.part3.text')" />
   </block-wrapper>
 </template>
 
@@ -23,12 +27,14 @@
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 import SkipLinkTitle from '@/components/SkipLinkTitle.vue'
 import AppImage from '@/components/AppImage.vue'
+import AppText from '@/components/shared/AppText.vue'
 
 export default {
   components: {
     BlockWrapper,
     SkipLinkTitle,
-    AppImage
+    AppImage,
+    AppText
   }
 }
 </script>

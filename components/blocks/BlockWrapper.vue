@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section :class="$style.section">
     <notch-wrapper>
-      <div class="wrapper">
+      <div :class="$style.wrapper">
         <slot />
       </div>
     </notch-wrapper>
@@ -17,8 +17,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-section {
+<style lang="postcss" module>
+.section {
   padding: 1.5em 0;
   @media (--viewport-md) {
     padding: 3em 0;
