@@ -13,7 +13,7 @@
       </li>
     </ul>
     <div :class="$style['image-wrapper']">
-      <app-image :class="$style['image']" src="/media/images/tse_mechanics.jpg?nf_resize=fit&w=770&h=425" width="770" height="425" />
+      <app-image :class="$style['image']" src="/media/images/tse_mechanics.jpg?nf_resize=fit&w=1000&h=674" width="1000" height="674" />
     </div>
     <app-text :text="$t('pages.whatWeDo.bottom.part1')" />
     <h2>{{ $t('pages.whatWeDo.bottom.part2.title') }}</h2>

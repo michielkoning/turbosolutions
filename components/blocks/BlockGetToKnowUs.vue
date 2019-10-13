@@ -5,7 +5,7 @@
 
     <app-text :text="$t('pages.getToKnowUs.text.top')" />
     <div :class="$style['image-wrapper']">
-      <app-image :class="$style.image" src="/media/images/tse_reparing.jpg?nf_resize=fit&w=770&h=425" width="770" height="425" />
+      <app-image :class="$style.image" src="/media/images/tse_reparing.jpg?nf_resize=fit&w=1000&h=674" width="1000" height="674" />
     </div>
     <app-text :text="$t('pages.getToKnowUs.text.bottom')" />
   </block-wrapper>
