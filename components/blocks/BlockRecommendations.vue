@@ -1,16 +1,8 @@
 <template>
   <block-wrapper>
     <h1>{{ $t('pages.recommendations.title') }}</h1>
-    <h2>Read what people are saying about our company and service.</h2>
     <p class="intro">
       {{ $t('pages.recommendations.intro') }}
-    </p>
-    <p>
-      {{ $t('pages.recommendations.text.part1') }}
-      <nuxt-link to="contact/">
-        {{ $t('pages.recommendations.text.part2') }}
-      </nuxt-link>
-      {{ $t('pages.recommendations.text.part3') }}
     </p>
     <ul>
       <li v-for="review in recommendations" :key="review.title">
@@ -44,7 +36,8 @@ export default {
         },
         {
           rating: 5,
-          cite: 'Recommendation Caribbean Turbochargers & Diesel - Republica Dominicana',
+          cite:
+            'Recommendation Caribbean Turbochargers & Diesel - Republica Dominicana',
           title: 'Always spare parts available',
           text: `
 <p>Caribbean Turbochargers & Diesel - Republica Dominicana</p>
@@ -58,8 +51,7 @@ export default {
           cite: 'Recommendation MEC Panama',
           rating: 5,
           title: '24/7 service is what we needed and what we got',
-          text:
-            `It is great pleasure that I recommend Bastian van Duinen, supplied turbocharger services and spare for ABB, MET, MAN and Napier turbocharger. I have known Bastiaan for several years, both on a professional and personal basis, while I was working as a General Manager at MEC Panamåa Shipyard, branch Veracruz; and Project Manager in the main yard.
+          text: `It is great pleasure that I recommend Bastian van Duinen, supplied turbocharger services and spare for ABB, MET, MAN and Napier turbocharger. I have known Bastiaan for several years, both on a professional and personal basis, while I was working as a General Manager at MEC Panamåa Shipyard, branch Veracruz; and Project Manager in the main yard.
 <p>MEC Shipyard, for sure, can recommend his services as we know that he can sort every turocharger related issue.</p>
 <p>About the spare parts, he always works with the highest quality, good economic value and on fast delivery time, never with delay.</p>
 <p>Bastiaan is diligent, hardworking and has a keen eye for details.</p>
@@ -71,8 +63,7 @@ export default {
           cite: 'Recommendation Tercaribe - Republica de Panama',
           rating: 5,
           title: '24/7 service is what we needed and what we got',
-          text:
-            `<p>El Giral Power Station is a powerplant of 50 MW, with MAN motors located in Colon, Republic of Panama, as former general manager of this utility I do certifies that in the time I was director at El Giral we do many services and spares supply where mister Bastiaan van Duinen was involved he always given high quality service and spares, also I certifies that his personal involvement always made this services a succes.</p>
+          text: `<p>El Giral Power Station is a powerplant of 50 MW, with MAN motors located in Colon, Republic of Panama, as former general manager of this utility I do certifies that in the time I was director at El Giral we do many services and spares supply where mister Bastiaan van Duinen was involved he always given high quality service and spares, also I certifies that his personal involvement always made this services a succes.</p>
 <p>Truly yours,</p>
 <p>Aderito Pastor Cabrera</p>
 `
@@ -81,8 +72,7 @@ export default {
           cite: 'Recommendation Dipper Dredge Rialto M. Christensen',
           rating: 5,
           title: '24/7 service is what we needed and what we got',
-          text:
-            `<p>Who subscribes, Engineer Victor A. Palma R., Chief Enginees in Charge of Dipper Dredge Rialto M. Christensen, belonging to the Authority of the Canal of Panama (ACP), hereby, attest that Turbo Solutions Europe,  has given us supply services and repair of units of the model  VTR320 turbochargers, which are installed in our two internal combustion engines brand FUJI.</p>
+          text: `<p>Who subscribes, Engineer Victor A. Palma R., Chief Enginees in Charge of Dipper Dredge Rialto M. Christensen, belonging to the Authority of the Canal of Panama (ACP), hereby, attest that Turbo Solutions Europe,  has given us supply services and repair of units of the model  VTR320 turbochargers, which are installed in our two internal combustion engines brand FUJI.</p>
 <p>Turbo Solutions Europe in the last two years has provided  us with new turbocharger units and provided the service of repair of two others with very good results, at very good prices and with short delivery times, which has resulted in a greater reliability in our internal combustion engines and thus impacted our dredging operation.</p>
 <p>The times that we have needed their service, has always been attentive to meet our needs.</p>
 <p>Sincerely,<br>
@@ -92,7 +82,6 @@ Dippor Dredge<br>
 Rialto M. Christensen
 </p>`
         }
-
       ]
     }
   }
