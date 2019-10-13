@@ -37,8 +37,8 @@ import IconBuilding from '@/assets/icons/building.svg'
 export default {
   components: {
     IconEnvelope,
-    IconBuilding,
-  },
+    IconBuilding
+  }
 }
 </script>
 
