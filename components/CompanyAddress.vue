@@ -19,12 +19,6 @@
       </p>
       <p>
         <span class="text">
-          <icon-envelope aria-hidden="true" width="20" height="20" />
-          <a :href="`tel:${$t('address.phoneNumber')}`" itemprop="telephone">
-            {{ $t('address.phoneNumber') }}
-          </a>
-        </span>
-        <span class="text">
           <icon-phone aria-hidden="true" width="20" height="20" />
           <a
             :href="`mailto:${$t('address.email')}`"
@@ -37,13 +31,11 @@
   </div>
 </template>
 <script>
-import IconEnvelope from '@/assets/icons/envelope.svg'
 import IconPhone from '@/assets/icons/phone.svg'
 import IconBuilding from '@/assets/icons/building.svg'
 
 export default {
   components: {
-    IconEnvelope,
     IconPhone,
     IconBuilding
   }
