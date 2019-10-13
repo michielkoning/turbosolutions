@@ -22,17 +22,22 @@
       "title": "What we do",
       "menuTitle": "What we do",
       "intro": "We maintain your engines with high-quality equipment for ages now.",
-      "text": [
-        "Our customers are mainly engine builders, ship owners, shipyards and power plants. Our mission is to enable them to overhaul their engines to provide them with state-of-the-art engine care solutions to optimize the running of their engines in order to save time and money with minimum environmental impact.",
-        "We offer six services to our customers:"
-      ],
-      "list": [
-        "Monitoring",
-        "Cleaning",
-        "Grinding & Machining",
-        "Fuel System Maintenance",
-        "Power Packs",
-        "Accessories & Consumables"
+      "top": {
+        "text": [
+          "Our customers are mainly engine builders, ship owners, shipyards and power plants. Our mission is to enable them to overhaul their engines to provide them with state-of-the-art engine care solutions to optimize the running of their engines in order to save time and money with minimum environmental impact.",
+          "Some of the services Turbo Solutions Europe can offer your company are:"
+        ],
+        "list": [
+          "Monitoring",
+          "Cleaning",
+          "Grinding & Machining",
+          "Fuel System Maintenance",
+          "Power Packs",
+          "Accessories & Consumables"
+        ]
+      },
+      "bottom": [
+        "Turbo Solution Europe services all types of modern, high-efficiency exhaust gas turbochargers in both single-stage radial and axial turbines designs. We are comfortable with engines ranging from 400 kW to 30,000 kW per turbocharger and have used engines using heavy fuel oil, diesel, gas or renewable fuels such as Jatropha oil, animal fat or recycled vegetable oils. In all cases we will help you make them run smoother, more efficiently and more reliably."
       ]
     },
     "mobileWorkshop": {
