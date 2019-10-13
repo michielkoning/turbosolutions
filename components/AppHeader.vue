@@ -80,12 +80,24 @@ export default {
 <style lang="postcss" scoped>
 header {
   background: var(--color-primary);
+  position: relative;
   @media (--show-full-navigation) {
     background: linear-gradient(
       90deg,
       transparent 50%,
       var(--color-primary) 50%
     );
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 50%;
+      right: 0;
+      top: 0;
+      height: 50%;
+      background: var(--color-primary-dark);
+    }
   }
 }
 
@@ -102,7 +114,7 @@ header {
   max-height: 100vh;
 
   @media (--show-full-navigation) {
-    padding: 1em var(--gutter) 1em 0;
+    padding: 0 var(--gutter) 0 0;
     flex-direction: column;
     overflow: visible;
     transform: translateY(0);
@@ -111,6 +123,10 @@ header {
     max-height: none;
     justify-content: space-around;
     flex: 1 0 auto;
+    background: linear-gradient(
+      var(--color-primary-dark) 50%,
+      var(--color-primary) 50%
+    );
   }
 }
 

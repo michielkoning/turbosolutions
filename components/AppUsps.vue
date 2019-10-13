@@ -1,16 +1,16 @@
 <template>
-  <ul>
-    <li>
-      <icon-star-empty aria-hidden="true" width="26" height="26" />
-      <span class="title">{{ $t('header.usps.quality') }}</span>
+  <ul :class="$style.list">
+    <li :class="$style['list-item']">
+      <icon-star-empty aria-hidden="true" width="26" height="26" :class="$style.icon" />
+      <span :class="$style.title">{{ $t('header.usps.quality') }}</span>
     </li>
-    <li>
-      <icon-spare-parts aria-hidden="true" width="24" height="24" />
-      <span class="title">{{ $t('header.usps.stock') }}</span>
+    <li :class="$style['list-item']">
+      <icon-spare-parts aria-hidden="true" width="24" height="24" :class="$style.icon" />
+      <span :class="$style.title">{{ $t('header.usps.stock') }}</span>
     </li>
-    <li>
-      <icon-service aria-hidden="true" width="24" height="24" />
-      <span class="title">{{ $t('header.usps.service') }}</span>
+    <li :class="$style['list-item']">
+      <icon-service aria-hidden="true" width="24" height="24" :class="$style.icon" />
+      <span :class="$style.title">{{ $t('header.usps.service') }}</span>
     </li>
   </ul>
 </template>
@@ -29,8 +29,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-ul {
+<style lang="postcss" module>
+.list {
   @mixin list-reset;
 
   text-transform: uppercase;
@@ -48,7 +48,7 @@ ul {
   }
 }
 
-li {
+.list-item {
   display: flex;
   margin-bottom: 0.5em;
 
@@ -63,7 +63,7 @@ li {
   margin-left: 0.5em;
 }
 
-svg {
+.icon {
   margin-top: 0.1em;
   flex: 0 0 auto;
 }
