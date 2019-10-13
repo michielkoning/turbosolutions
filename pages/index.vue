@@ -1,7 +1,7 @@
 <template>
   <div>
     <block-gallery />
-    <block-mobile-workshop />
+    <block-mobile-workshop :show-full-page-image="false" />
   </div>
 </template>
 
