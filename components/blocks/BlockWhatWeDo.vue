@@ -12,9 +12,7 @@
         </p>
       </li>
     </ul>
-    <div :class="$style['image-wrapper']">
-      <app-image :class="$style['image']" src="/media/images/tse_mechanics.jpg?nf_resize=fit&w=1000&h=674" width="1000" height="674" />
-    </div>
+    <full-page-image image="tse_mechanics" />
     <app-text :text="$t('pages.whatWeDo.bottom.part1')" />
     <h2>{{ $t('pages.whatWeDo.bottom.part2.title') }}</h2>
     <app-text :text="$t('pages.whatWeDo.bottom.part2.text')" />
@@ -26,26 +24,15 @@
 <script>
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 import SkipLinkTitle from '@/components/SkipLinkTitle.vue'
-import AppImage from '@/components/AppImage.vue'
+import FullPageImage from '@/components/shared/FullPageImage.vue'
 import AppText from '@/components/shared/AppText.vue'
 
 export default {
   components: {
     BlockWrapper,
     SkipLinkTitle,
-    AppImage,
+    FullPageImage,
     AppText
   }
 }
 </script>
-
-<style lang="postcss" module>
-.image {
-  display: block;
-  width: 100%;
-}
-
-.image-wrapper {
-  margin: 0 calc(var(--gutter) / -2) 1em;
-}
-</style>

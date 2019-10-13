@@ -7,20 +7,23 @@
         <p>{{ $t('blocks.mobileWorkshop.text') }}</p>
       </div>
       <div>
-        <app-image src="/media/images/tse_welding.jpg?nf_resize=fit&w=600&h=470" width="600" height="470" />
+        <app-image src="/media/images/mobile-workshop.png?nf_resize=fit&w=600&h=470" width="600" height="470" />
       </div>
     </div>
+    <full-page-image image="tse_welding" />
   </block-wrapper>
 </template>
 
 <script>
 import BlockWrapper from '@/components/blocks/BlockWrapper.vue'
 import AppImage from '@/components/AppImage.vue'
+import FullPageImage from '@/components/shared/FullPageImage.vue'
 
 export default {
   components: {
     BlockWrapper,
-    AppImage
+    AppImage,
+    FullPageImage
   }
 }
 </script>
