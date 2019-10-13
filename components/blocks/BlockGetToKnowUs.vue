@@ -1,11 +1,13 @@
 <template>
   <block-wrapper>
-    <skip-link-title class="title" :title="$t('pages.getToKnowUs.title')" />
+    <skip-link-title :title="$t('pages.getToKnowUs.title')" />
     <h2>{{ $t('pages.getToKnowUs.intro') }}</h2>
 
-    <p>{{ $t('pages.getToKnowUs.text.top') }}</p>
-    <div class="image-wrapper">
-      <app-image src="/media/images/tse_reparing.jpg?nf_resize=fit&w=770&h=425" width="770" height="425" />
+    <p v-for="text in $t('pages.getToKnowUs.text.top')" :key="text">
+      {{ text }}
+    </p>
+    <div :class="$style['image-wrapper']">
+      <app-image :class="$style.image" src="/media/images/tse_reparing.jpg?nf_resize=fit&w=770&h=425" width="770" height="425" />
     </div>
     <p>{{ $t('pages.getToKnowUs.text.bottom') }}</p>
   </block-wrapper>
@@ -25,8 +27,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-img {
+<style lang="postcss" module>
+.image {
   display: block;
   width: 100%;
 }

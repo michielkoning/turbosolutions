@@ -1,7 +1,7 @@
 <template>
-  <block-wrapper class="block-form-contact">
+  <block-wrapper>
     <skip-link-title class="title" :title="$t('pages.contact.title')" />
-    <div class="wrapper">
+    <div :class="$style.wrapper">
       <company-address />
       <social-links />
     </div>
@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss" module>
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
