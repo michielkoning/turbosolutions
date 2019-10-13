@@ -61,8 +61,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
-    '@nuxtjs/axios'
-    // '@nuxtjs/google-analytics'
+    '@nuxtjs/axios',
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Axios module configuration
