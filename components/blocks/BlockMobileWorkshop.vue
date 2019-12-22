@@ -10,7 +10,7 @@
         <app-image src="/media/images/mobile-workshop.png?nf_resize=fit&w=600&h=470" width="600" height="470" />
       </div>
     </div>
-    <full-page-image image="tse_welding" />
+    <full-page-image v-if="showFullPageImage" image="tse_welding" />
   </block-wrapper>
 </template>
 
@@ -24,6 +24,12 @@ export default {
     BlockWrapper,
     AppImage,
     FullPageImage
+  },
+  props: {
+    showFullPageImage: {
+      type: Boolean,
+      default: true
+    }
   }
 }
 </script>

@@ -2,7 +2,20 @@
   "pages": {
     "home": {
       "menuTitle": "Home",
-      "title": "Gamechanging service for turbochargers"
+      "title": "Gamechanging service for turbochargers",
+      "bottom": {
+        "h1": "Expect the best",
+        "h2": "This is what we do",
+        "text": {
+          "part1": [
+            "We, at TSE, work 24/7 to keep turbos at peak performance to maximize efficiency and reliability. We are striving for fair prices for all of our customers worldwide. We deliver onsite servicing and repair of turbochargers, provide new and re-conditioned OEM spare parts and components. All industries include Marine Shipping and Power Generation."
+          ],
+          "part2": [
+            "Turbine rotor bearing and seal journal reconditioning, turbine rotor seal ring groove repairs and or replacement, turbine axial and radial blade repairs, casing ultrasonic thickness testing, cleaning and crack detection, casing weld repairs, casing inlet and rotor bore reconditioning, bearing casing seal area reconditioning, air compressor wheel, hardness checks, weld repairs, crack detection profile machining and turbine nozzle / Air diffuser ring weld reconditioning."
+          ]
+        },
+        "h3": "Workshop Services for classification approval include the following:"
+      }
     },
     "getToKnowUs": {
       "title": "Get to know us",
@@ -78,12 +91,7 @@
     "recommendations": {
       "title": "Recommendations",
       "menuTitle": "Recommendations",
-      "intro": "Read what people are saying about our company and service.",
-      "text": {
-        "part1": "If you want to share your honest opinion about our company and service, please feel free to contact us by sending your review. You can also use the contactform at the ",
-        "part2": "Contactpage",
-        "part3": "."
-      }
+      "intro": "Read what people are saying about our company and service."
     },
     "contact": {
       "title": "Contact",

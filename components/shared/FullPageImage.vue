@@ -33,5 +33,6 @@ export default {
 
 .image-wrapper {
   margin: 0 calc(var(--gutter) / -2) 1em;
+  padding: 1em 0;
 }
 </style>
