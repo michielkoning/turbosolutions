@@ -1,6 +1,6 @@
 <template>
   <block-wrapper>
-    <skip-link-title class="title" :title="$t('pages.whatWeDo.title')" />
+    <skip-link-title :title="$t('pages.whatWeDo.title')" class="title" />
     <h2>{{ $t('pages.whatWeDo.intro') }}</h2>
     <app-text :text="$t('pages.whatWeDo.top.text')" />
 

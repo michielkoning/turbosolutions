@@ -49,8 +49,8 @@ export default {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/axios',
-    '~/plugins/vuelidate',
-    '~/plugins/google-maps'
+    '~/plugins/google-maps',
+    '~/plugins/vuelidate'
   ],
 
   /*
@@ -61,9 +61,10 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
-    '@nuxtjs/axios',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/axios'
   ],
+  buildModules: ['@nuxtjs/google-analytics'],
+
   /*
    ** Axios module configuration
    */
@@ -121,5 +122,8 @@ export default {
   },
   sitemap: {
     hostname: baseUrl
+  },
+  generate: {
+    fallback: true
   }
 }

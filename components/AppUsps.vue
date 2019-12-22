@@ -1,15 +1,15 @@
 <template>
   <ul :class="$style.list">
     <li :class="$style['list-item']">
-      <icon-star-empty aria-hidden="true" width="26" height="26" :class="$style.icon" />
+      <icon-star-empty :class="$style.icon" aria-hidden="true" width="26" height="26" />
       <span :class="$style.title">{{ $t('header.usps.quality') }}</span>
     </li>
     <li :class="$style['list-item']">
-      <icon-spare-parts aria-hidden="true" width="24" height="24" :class="$style.icon" />
+      <icon-spare-parts :class="$style.icon" aria-hidden="true" width="24" height="24" />
       <span :class="$style.title">{{ $t('header.usps.stock') }}</span>
     </li>
     <li :class="$style['list-item']">
-      <icon-service aria-hidden="true" width="24" height="24" :class="$style.icon" />
+      <icon-service :class="$style.icon" aria-hidden="true" width="24" height="24" />
       <span :class="$style.title">{{ $t('header.usps.service') }}</span>
     </li>
   </ul>

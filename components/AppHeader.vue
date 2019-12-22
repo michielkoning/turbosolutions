@@ -11,14 +11,14 @@
       <icon-header-bow aria-hidden="true" class="header-bow" />
 
       <transition
-        name="fade2"
         @after-enter="afterEnter"
         @after-leave="afterLeave"
         @before-leave="beforeLeave"
+        name="fade2"
       >
         <div v-show="showMenu" class="bg">
           <transition name="fade">
-            <div v-show="showMenu" ref="bg" class="content">
+            <div ref="bg" v-show="showMenu" class="content">
               <main-navigation />
               <app-usps class="usps" />
             </div>

@@ -1,7 +1,9 @@
 <template>
-  <icon-star-full v-if="star === 'star-full'" width="24" height="24" />
-  <icon-star-empty v-else-if="star === 'star-empty'" width="24" height="24" />
-  <icon-star-half v-else-if="star === 'star-half'" width="24" height="24" />
+  <div class="star">
+    <icon-star-full v-if="star === 'star-full'" width="24" height="24" />
+    <icon-star-empty v-else-if="star === 'star-empty'" width="24" height="24" />
+    <icon-star-half v-else-if="star === 'star-half'" width="24" height="24" />
+  </div>
 </template>
 
 <script>
@@ -27,5 +29,9 @@ export default {
 <style lang="postcss" scoped>
 svg {
   fill: #f5a623;
+}
+
+.star {
+  display: inline-block;
 }
 </style>

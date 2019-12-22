@@ -46,9 +46,9 @@
       </li>
     </ul>
     <div
-      class="arrow"
       :class="{ active: mounted }"
       :style="{ transform: arrowPosition, width: arrowWidth }"
+      class="arrow"
     />
   </nav>
 </template>

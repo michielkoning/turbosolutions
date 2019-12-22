@@ -1,44 +1,46 @@
 <template>
-  <p v-if="submitted">
-    {{ $t('form.forms.contact.success') }}
-  </p>
+  <div>
+    <p v-if="submitted">
+      {{ $t('form.forms.contact.success') }}
+    </p>
 
-  <form
-    v-else
-    action
-    data-netlify="true"
-    method="post"
-    name="contact"
-    @submit.prevent="submit"
-  >
-    <input type="hidden" name="form-name" value="contact">
-    <form-fieldset :title="$t('form.forms.contact.title')">
-      <form-input-text
-        v-model.trim.lazy="$v.form.name.$model"
-        type="text"
-        name="name"
-        :title="$t('form.fields.name')"
-        :error-message="errorMessageName"
-      />
-      <form-input-text
-        v-model.trim.lazy="$v.form.email.$model"
-        name="email"
-        type="email"
-        :title="$t('form.fields.email')"
-        :error-message="errorMessageEmail"
-      />
-      <form-textarea
-        v-model.trim="form.message"
-        name="message"
-        rows="4"
-        type="message"
-        :title="$t('form.fields.message')"
-      />
-      <button type="submit" class="btn">
-        {{ $t('form.buttons.send') }}
-      </button>
-    </form-fieldset>
-  </form>
+    <form
+      v-else
+      @submit.prevent="submit"
+      action
+      data-netlify="true"
+      method="post"
+      name="contact"
+    >
+      <input type="hidden" name="form-name" value="contact">
+      <form-fieldset :title="$t('form.forms.contact.title')">
+        <form-input-text
+          v-model.trim.lazy="$v.form.name.$model"
+          :title="$t('form.fields.name')"
+          :error-message="errorMessageName"
+          type="text"
+          name="name"
+        />
+        <form-input-text
+          v-model.trim.lazy="$v.form.email.$model"
+          :title="$t('form.fields.email')"
+          :error-message="errorMessageEmail"
+          name="email"
+          type="email"
+        />
+        <form-textarea
+          v-model.trim="form.message"
+          :title="$t('form.fields.message')"
+          name="message"
+          rows="4"
+          type="message"
+        />
+        <button type="submit" class="btn">
+          {{ $t('form.buttons.send') }}
+        </button>
+      </form-fieldset>
+    </form>
+  </div>
 </template>
 
 <script>

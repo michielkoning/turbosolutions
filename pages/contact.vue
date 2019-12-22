@@ -16,7 +16,13 @@ export default {
   },
   head () {
     return {
-      title: this.$t('pages.contact.title')
+      title: this.$t('pages.contact.title'),
+      link: [
+        {
+          rel: 'dns-prefetch',
+          href: '//maps.googleapis.com'
+        }
+      ]
     }
   }
 }

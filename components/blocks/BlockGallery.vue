@@ -1,7 +1,7 @@
 <template>
   <block-wrapper>
     <div class="gallery">
-      <skip-link-title class="title" :title="$t('pages.home.title')" />
+      <skip-link-title :title="$t('pages.home.title')" class="title" />
       <app-image src="/media/images/image-1.jpg?nf_resize=fit&w=518&h=316" class="image-1" width="518" height="316" />
       <app-image src="/media/images/image-2.jpg?nf_resize=fit&w=391&h=537" class="image-2" width="391" height="537" />
       <app-image src="/media/images/image-3.jpg?nf_resize=fit&w=391&h=537" class="image-3" width="391" height="537" />
